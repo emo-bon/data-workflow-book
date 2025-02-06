@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Glossary · EMO-BON Data Management Book</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="All documents related to the data management of the Emo-Bon project.
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="VLIZ Open Science team"><link rel="stylesheet" href="/data-management-book/assets/gitbook/style.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/custom-local.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/data-management-book/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/data-management-book//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/data-management-book/flow/" />
+        
+
+        
+            <link rel="next" href="/data-management-book/repository-naming/" />
+        
+    </head>
+    <body>
+        <iframe id="idIframe" src="https://data.emobon.embrc.eu/navigation.html" width="100%" style="border: none; position: sticky; top: 0; z-index: 1000; max-height: 150px;"></iframe><div class="book-summary">
+    <script type="text/javascript">
+        // Fixes the page links scroll problem on both desktop and mobile browsers
+        function pageScrollToTop(element) {
+            // both mobile and non-mobile
+            $('div.body-inner').animate({scrollTop: 0});
+            $(element).parent().find('li>ul>li').removeClass('active');
+            return true;  // propagate
+        }
+        // Fixes the anchor links scroll problem on mobile browsers
+        function mobilePageScrollToAnchor(element) {
+            $(element).closest('li.chapter').find('ul>li').removeClass('active');
+            $(element).parent().addClass('active');
+            if ($(document).width() <= 1240) {
+                let target = $($(element).attr('href'));
+                if (target.length) {
+                    $('div.body-inner').animate({
+                        scrollTop: target.get(0).offsetTop,
+                    });
+                }
+            }
+            return true;
+        }
+    </script>
+
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/data-management-book/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="/data-management-book">
+            
+                <a href="/data-management-book/" onclick="pageScrollToTop(this)">
+                    EMO-BON Data Management Book
+                </a>
+                
+                    
+                
+            </li>
+
+            <li class="divider"></li>
+
+            
+                
+                    
+                    <!-- <p>documentation</p> -->
+                    
+                        
+
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/data-management-book/devops/">
+                            
+                                <a href="/data-management-book/devops/" onclick="pageScrollToTop(this)">
+                                    Devops
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/data-management-book/entities/">
+                            
+                                <a href="/data-management-book/entities/" onclick="pageScrollToTop(this)">
+                                    Entities
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/data-management-book/flow/">
+                            
+                                <a href="/data-management-book/flow/" onclick="pageScrollToTop(this)">
+                                    Flow
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter active" data-level="1.2" data-path="/data-management-book/glossary/">
+                            
+                                <a href="/data-management-book/glossary/" onclick="pageScrollToTop(this)">
+                                    Glossary
+                                </a>
+                                
+                                    
+                                        <ul><li><a href="#physical-concepts" onclick="mobilePageScrollToAnchor(this)" >Physical concepts</a></li><li><a href="#digital-concepts" onclick="mobilePageScrollToAnchor(this)" >Digital concepts</a></li></ul>
+
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/data-management-book/repository-naming/">
+                            
+                                <a href="/data-management-book/repository-naming/" onclick="pageScrollToTop(this)">
+                                    Repository naming
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+
+                        
+                            <li class="divider"></li>
+                        
+                    
+                
+            
+        </ul>
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Glossary</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/glossary">Glossary</h1>
+                    
+
+                    <p>A comprehensive list of terms and definitions used throughout the EMO-BON project.</p>
+
+<h2 id="physical-concepts">Physical concepts</h2>
+
+<ul>
+  <li><strong>Partner</strong>:<br />
+An EMO BON member, which is typically but not exclusively an institute.</li>
+  <li><strong>Station</strong>:<br />
+An EMO BON Station. Stations collect EMO BON samples. Stations may have multiple observatories, and each observatory can involve contributions from one or more partners.</li>
+  <li><strong>Observatory</strong>:<br />
+An EMO BON organisational unit linked to the collection of a specific sample type (e.g. water column, soft sediment) from a fixed, pre-determined location. While <em>technically</em> an observatory is tied to a sample type, this distinction is often ignored in casual use since the observatory’s base name (obs_id) is the same for all sample types.
+    <ul>
+      <li><strong>Notes</strong>: Definition may need an update once the ARMS units are fully incorporated in EMO BON.</li>
+    </ul>
+  </li>
+  <li><strong>Sampling event</strong>:<br />
+A sampling action performed at a particular observatory at a specific time, resulting in the collection of one or more samples.</li>
+  <li><strong>Material Sample</strong>:<br />
+Refers to a material sample collected during a sampling event. Each unique material sample has a unique material sample ID. Also used to refer to the sample material that was sequenced, where the physical sample no longer exists but it is virtually present via its sample ID.</li>
+</ul>
+
+<h2 id="digital-concepts">Digital concepts</h2>
+
+<ul>
+  <li><strong>Logsheet</strong>:<br />
+The spreadsheets in which the observatories write their sample and event data. The source spreadsheets are on the EMO BON googledrive, from where they are harvested as CSV into EMOBON’s GH space. The “transformed” logsheets are those that have been subjected to a date-range selection and a QC.</li>
+  <li><strong>EMO BON data</strong>:<br />
+Here we mean: the content of the logsheets, which are filled by the observatories to describe their collected samples; the sequences in ENA; the outputs from bioinformatics processing.
+    <ul>
+      <li><strong>Notes</strong>: And once ARMS units are incorporated, this will also include ARMS images.</li>
+    </ul>
+  </li>
+  <li><strong>EMO BON metadata</strong>:<br />
+Here we mean the data that is used specifically to describe EMO BON data, performing the function of allowing discovery, understanding, organising, cataloguing, etc. Metadata are recorded in the rocrate-metadata.json files; they are added to ENA accessions; they are in files in the EMO BON repos governance-data, sequencing-data, observatory-profile, among others.</li>
+  <li><strong>EMO BON record</strong>:<br />
+A digital representation of a sampling event, capturing the relevant data and metadata associated with it. There is no fixed idea of what is included in an EMO BON record, as that depends on the system that these records are being held in; for example, EMO BON records in EurOBIS and in Blue Cloud will not necessarily be the same.</li>
+  <li><strong>Catalogue asset</strong>:<br />
+The smallest unit of “EMOBON dataset” that goes into a dataset’s metadata catalogue, i.e. a specific “EMO BON record” in a specific catalogue. Can be a single data file or a set of files.</li>
+  <li><strong>EMO BON Repository</strong>:<br />
+A GitHub repository* that contains EMO BON data and metadata.<br />
+<em>*A GitHub repository</em> represents a storage location for files and their version history, managed using Git version control which allows users to track changes, collaborate with others, and maintain a complete record of the project’s development over time.</li>
+  <li><strong>EMO BON RO-Crate</strong>:<br />
+EMO BON ro-crates* contain data associated with: logsheets from observatories, MetaGOflow runs, sequencing metadata. Usually, our ro-crates are single repositories, but for some, one repository contains multiple ro-crates. A ro-crate is manifest via a ro-crate-metadata.json file.<br />
+<em>*An Ro-crate</em> is a collection of data files, metadata, and contextual information that organizes research data in a structured format, enabling easy sharing, reuse, and understanding in both machine-readable and human-readable forms.</li>
+  <li><strong>EM BON ro-crate-metadata.json</strong>:<br />
+A ro-crate-metadata.json file* that describes the contents of an EMO BON RO-Crate.<br />
+<em>*A rocrate-metadata.json file</em> is a JSON-LD file that provides a detailed description of the contents and structure of an RO-Crate. It maps relationships between files and their metadata, ensuring traceability, context, and purpose for data within research workflows.</li>
+  <li><strong>Sequence</strong>:<br />
+A DNA string. Specifically, we mean (raw) sequences as produced from the material samples by Genoscope and held on their cloud drive and then archived on ENA.</li>
+  <li><strong>processed sequences / OTUs / ASVs</strong>:<br />
+These are sequences that have been processed by a bioinformatics code to a stage where they can be/have been compared to taxonomic reference libraries.</li>
+  <li><strong>Stub</strong>:<br />
+N/A</li>
+</ul>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+
+                        <a href="/data-management-book/flow/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Flow">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/data-management-book/repository-naming/" class="navigation navigation-next navigation-unique" aria-label="Next page: Repository naming">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "Repository naming",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_documentation/repository-naming.md",
+            "ref": "_documentation/repository-naming.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "EMO-BON Data Management Book",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_documentation/glossary.md",
+        "mtime": "2025-02-06 00:00:00 +0100",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2025-02-06 13:44:24 +0100"
+    },
+    "basePath": "/data-management-book",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script> 
+        </div><script src="/data-management-book/assets/gitbook/gitbook.js"></script>
+<script src="/data-management-book/assets/gitbook/theme.js"></script>
+
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/data-management-book/assets/gitbook/custom.js"></script>
+<script src="/data-management-book/assets/gitbook/custom-local.js"></script>
+
+</body>
+</html>

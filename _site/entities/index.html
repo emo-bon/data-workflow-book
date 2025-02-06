@@ -1,0 +1,580 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head><meta charset="UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><title>Entities · EMO-BON Data Management Book</title><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="description" content="All documents related to the data management of the Emo-Bon project.
+"><meta name="generator" content="Jekyll (using style of GitBook 3.2.3)"><meta name="author" content="VLIZ Open Science team"><link rel="stylesheet" href="/data-management-book/assets/gitbook/style.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-fontsettings/website.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-search-pro/search.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/gitbook-plugin-splitter/splitter.css">
+
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/rouge/colorful.css">
+
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/custom.css">
+<link rel="stylesheet" href="/data-management-book/assets/gitbook/custom-local.css">
+
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/data-management-book/assets/gitbook/images/apple-touch-icon-precomposed-152.png">
+<link rel="shortcut icon" href="/data-management-book//assets/gitbook/images/favicon.ico" type="image/x-icon">
+
+
+
+
+            <link rel="prev" href="/data-management-book/devops/" />
+        
+
+        
+            <link rel="next" href="/data-management-book/flow/" />
+        
+    </head>
+    <body>
+        <iframe id="idIframe" src="https://data.emobon.embrc.eu/navigation.html" width="100%" style="border: none; position: sticky; top: 0; z-index: 1000; max-height: 150px;"></iframe><div class="book-summary">
+    <script type="text/javascript">
+        // Fixes the page links scroll problem on both desktop and mobile browsers
+        function pageScrollToTop(element) {
+            // both mobile and non-mobile
+            $('div.body-inner').animate({scrollTop: 0});
+            $(element).parent().find('li>ul>li').removeClass('active');
+            return true;  // propagate
+        }
+        // Fixes the anchor links scroll problem on mobile browsers
+        function mobilePageScrollToAnchor(element) {
+            $(element).closest('li.chapter').find('ul>li').removeClass('active');
+            $(element).parent().addClass('active');
+            if ($(document).width() <= 1240) {
+                let target = $($(element).attr('href'));
+                if (target.length) {
+                    $('div.body-inner').animate({
+                        scrollTop: target.get(0).offsetTop,
+                    });
+                }
+            }
+            return true;
+        }
+    </script>
+
+    <nav role="navigation">
+        <div id="book-search-input" role="search">
+            <input type="text" placeholder="Type to search" />
+        </div>
+        <div id="book-search-input-link" role="search">
+            <a href="/data-management-book/assets/search.html">Click to Search</a>
+        </div>
+        <ul class="summary">
+            
+            <li class="chapter" data-level="1.1" data-path="/data-management-book">
+            
+                <a href="/data-management-book/" onclick="pageScrollToTop(this)">
+                    EMO-BON Data Management Book
+                </a>
+                
+                    
+                
+            </li>
+
+            <li class="divider"></li>
+
+            
+                
+                    
+                    <!-- <p>documentation</p> -->
+                    
+                        
+
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/data-management-book/devops/">
+                            
+                                <a href="/data-management-book/devops/" onclick="pageScrollToTop(this)">
+                                    Devops
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter active" data-level="1.2" data-path="/data-management-book/entities/">
+                            
+                                <a href="/data-management-book/entities/" onclick="pageScrollToTop(this)">
+                                    Entities
+                                </a>
+                                
+                                    
+                                        <ul><li><a href="#ro-profiles" onclick="mobilePageScrollToAnchor(this)" >RO-Profiles</a></li><li><a href="#crates" onclick="mobilePageScrollToAnchor(this)" >Crates</a><ul><li><a href="#governance-crate" onclick="mobilePageScrollToAnchor(this)" >Governance Crate</a></li><li><a href="#observatory-crate" onclick="mobilePageScrollToAnchor(this)" >Observatory Crate</a></li><li><a href="#analysis-results-crate" onclick="mobilePageScrollToAnchor(this)" >Analysis-Results Crate</a></li><li><a href="#sequencing-crate" onclick="mobilePageScrollToAnchor(this)" >Sequencing Crate</a></li></ul></li><li><a href="#data-entities" onclick="mobilePageScrollToAnchor(this)" >Data Entities</a><ul><li><a href="#dataset-" onclick="mobilePageScrollToAnchor(this)" >Dataset ?</a></li><li><a href="#observatory" onclick="mobilePageScrollToAnchor(this)" >Observatory</a></li><li><a href="#sampling-event" onclick="mobilePageScrollToAnchor(this)" >Sampling Event</a></li><li><a href="#sample" onclick="mobilePageScrollToAnchor(this)" >Sample</a></li><li><a href="#measurementsobservations" onclick="mobilePageScrollToAnchor(this)" >Measurements/Observations</a></li><li><a href="#sequencing-run" onclick="mobilePageScrollToAnchor(this)" >Sequencing Run</a></li><li><a href="#batch" onclick="mobilePageScrollToAnchor(this)" >Batch</a></li><li><a href="#sequence" onclick="mobilePageScrollToAnchor(this)" >Sequence</a></li><li><a href="#analysis-result" onclick="mobilePageScrollToAnchor(this)" >Analysis Result</a></li></ul></li></ul>
+
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/data-management-book/flow/">
+                            
+                                <a href="/data-management-book/flow/" onclick="pageScrollToTop(this)">
+                                    Flow
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/data-management-book/glossary/">
+                            
+                                <a href="/data-management-book/glossary/" onclick="pageScrollToTop(this)">
+                                    Glossary
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+                            
+                            <li class="chapter" data-level="1.1" data-path="/data-management-book/repository-naming/">
+                            
+                                <a href="/data-management-book/repository-naming/" onclick="pageScrollToTop(this)">
+                                    Repository naming
+                                </a>
+                                
+                                    
+                                
+                            </li>
+                        
+
+                        
+                            <li class="divider"></li>
+                        
+                    
+                
+            
+        </ul>
+    </nav>
+</div>
+<div class="book-body">
+                <div class="book-header" role="navigation">
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                        
+                            <a href="." >Entities</a>
+                        
+                    </h1>
+                </div>
+
+                <div class="body-inner"><div class="page-wrapper" tabindex="-1" role="main">
+    
+
+    <div class="page-inner">
+        <div id="book-search-results">
+            <div class="search-noresults">
+                <section class="normal markdown-section">
+                    
+                        <h1 id="/entities">Entities</h1>
+                    
+
+                    <h1 id="ro-profiles">RO-Profiles</h1>
+
+<h4 id="concept">Concept</h4>
+<p>RO-profiles encapsulate Research Object (RO) profiles that describe conformity to a fixed set of expectations for data structures. They ensure consistency in the way research data is formatted and provide practical assets such as templates, SHACL files, documentation, and other reference materials. (More information available at: <a href="https://www.researchobject.org/ro-crate/specification/1.2-DRAFT/profiles.html">Ro Crate profiles</a>)</p>
+
+<h4 id="uri-format">URI Format</h4>
+<p><code class="language-plaintext highlighter-rouge">https://data.embon.embrc.eu/{name}-profile/{version}</code></p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">{name}</code>: One of <code class="language-plaintext highlighter-rouge">observatory</code>, <code class="language-plaintext highlighter-rouge">sequencing</code>, <code class="language-plaintext highlighter-rouge">analysis-results</code></li>
+  <li><code class="language-plaintext highlighter-rouge">{version}</code>: <code class="language-plaintext highlighter-rouge">latest</code> or a specific version vM.m.p. (e.g., <code class="language-plaintext highlighter-rouge">v1.0.0</code>)</li>
+</ul>
+
+<h4 id="creation--management">Creation &amp; Management</h4>
+<ul>
+  <li>Managed at: <code class="language-plaintext highlighter-rouge">https://github.com/emo-bon/{name}-profile</code></li>
+</ul>
+
+<h4 id="references">References</h4>
+<ul>
+  <li>Used as metadata descriptors for crates that comply with specific profile expectations.</li>
+</ul>
+
+<hr />
+<h1 id="crates">Crates</h1>
+
+<h3 id="concept-1">Concept</h3>
+<p>Crates are structured data packages that encapsulate various types of research data. They serve as containers for datasets, metadata, and other related information, ensuring consistency, traceability, and compliance with RO-profiles.</p>
+
+<h3 id="types">Types</h3>
+<h2 id="governance-crate">Governance Crate</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+Contains information relating to the governance of EMO BON GitHub activities and actions.</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://github.com/emo-bon/governance-crate/</code></li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://data.emobon.embrc.eu/governance-crate/</code></li>
+  <li><strong>References</strong>:<br />
+?</li>
+</ul>
+
+<h2 id="observatory-crate">Observatory Crate</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+Holds information about an EMOBON Observatory, its associated sampling events, and the data generated from those events.</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://github.com/emo-bon/observatory-{obsid}-crate/</code></li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://data.emobon.embrc.eu/observatory-{obsid}-crate/</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">{obsid}</code>: Name of the EMOBON observatory</li>
+    </ul>
+  </li>
+  <li><strong>References</strong>:<br />
+?</li>
+</ul>
+
+<h2 id="analysis-results-crate">Analysis-Results Crate</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+Holds information and data resulting from MetaGOFlow data analysis processes.</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://github.com/emo-bon/analysis-results-{cluster}-crate/{genoscope-code}/</code></li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/{genoscope-code}/</code></li>
+  <li><strong>References</strong>:</li>
+</ul>
+
+<h2 id="sequencing-crate">Sequencing Crate</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+Holds information and data resulting from sequencing runs.</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://github.com/emo-bon/sequencing-crate/??/{material_sample_id}</code></li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://data.emobon.embrc.eu/sequencing-crate/??/{material_sample_id}</code></li>
+  <li><strong>References</strong>:</li>
+</ul>
+
+<hr />
+
+<h1 id="data-entities">Data Entities</h1>
+
+<h2 id="dataset-">Dataset ?</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+A curated collection of data, potentially with a persistent identifier and versioning.</li>
+  <li><strong>Creation &amp; Management</strong>: Created when structured data is published for reuse.</li>
+  <li><strong>URI Format</strong>:</li>
+  <li><strong>References</strong>:</li>
+</ul>
+
+<h2 id="observatory">Observatory</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+An EMO BON organisational unit linked to the collection of a specific sample type (e.g. water column, soft sediment) from a fixed, pre-determined location.</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://github.com/emo-bon/observatory-{obsid}-crate/</code></li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">http://data.emobon.embrc.eu/observatory-{obsid}-crate/{env_package}/observatory/{obsid}</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">{obsid}</code>: …</li>
+      <li><code class="language-plaintext highlighter-rouge">{env_package}</code>: …</li>
+    </ul>
+  </li>
+  <li><strong>References</strong>:<br />
+?</li>
+</ul>
+
+<h2 id="sampling-event">Sampling Event</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+A sampling action performed at a particular observatory at a specific time, resulting in the collection of one or more samples.</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://github.com/emo-bon/observatory-{obsid}-crate/tree/main/{env_package}/sampling</code></li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">http://data.emobon.embrc.eu/observatory-{obsid}-crate/{env_package}/sampling/{source_mat_id}</code></li>
+  <li><strong>References</strong>:<br />
+?</li>
+</ul>
+
+<h2 id="sample">Sample</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+A material sample collected during a sampling event.</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://github.com/emo-bon/observatory-{obsid}-crate/tree/main/{env_package}/sampling</code></li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">http://data.emobon.embrc.eu/observatory-{obsid}-crate/{env_package}/measured/{source_mat_id}</code></li>
+  <li><strong>References</strong>: 
+?</li>
+</ul>
+
+<h2 id="measurementsobservations">Measurements/Observations</h2>
+<ul>
+  <li><strong>Concept</strong>: 
+A measurement or observations made from a sample.</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://github.com/emo-bon/observatory-{obsid}-crate/tree/main/{env_package}/measured</code></li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">http://data.emobon.embrc.eu/observatory-{obsid}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}</code></li>
+  <li><strong>References</strong>:
+?</li>
+</ul>
+
+<h2 id="sequencing-run">Sequencing Run</h2>
+<ul>
+  <li><strong>Concept</strong>:</li>
+  <li><strong>Creation &amp; Management</strong>:</li>
+  <li><strong>URI Format</strong>: <code class="language-plaintext highlighter-rouge">https://data.emobon.embrc.eu/sequencing-run/{run-id}/</code></li>
+  <li><strong>References</strong>: Found in sequencing crates and analysis workflows.</li>
+</ul>
+
+<h2 id="batch">Batch</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+…</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+``</li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://data.emobon.embrc.eu/batch/{batch-id}/</code></li>
+  <li><strong>References</strong>:<br />
+?</li>
+</ul>
+
+<h2 id="sequence">Sequence</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+…</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+``</li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://data.emobon.embrc.eu/sequence/{sequence-id}/</code></li>
+  <li><strong>References</strong>:</li>
+</ul>
+
+<h2 id="analysis-result">Analysis Result</h2>
+<ul>
+  <li><strong>Concept</strong>:<br />
+…</li>
+  <li><strong>Creation &amp; Management</strong>:<br />
+``</li>
+  <li><strong>URI Format</strong>:<br />
+<code class="language-plaintext highlighter-rouge">https://data.emobon.embrc.eu/analysis-result/{result-id}/</code></li>
+  <li><strong>References</strong>: 
+?</li>
+</ul>
+</section>
+            </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div></div>
+    </div>
+</div>
+
+<!-- introduce mathjax support -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+<!-- introduce per-page mermaid support -->
+
+
+<!-- introduce mathjax support -->
+<script>
+    function fixes_chrome_anchors() {
+        let chrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        if (window.location.hash && chrome) {
+            setTimeout(function () {
+                var hash = window.location.hash;
+                window.location.hash = "";
+                window.location.hash = hash;
+            }, 300);
+        }
+    }
+
+    if (document.readyState === "loading") {
+        // Loading hasn't finished yet
+        document.addEventListener("DOMContentLoaded", fixes_chrome_anchors);
+    } else {
+        // `DOMContentLoaded` has already fired
+        fixes_chrome_anchors();
+    }
+</script>
+
+
+                        <a href="/data-management-book/devops/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Devops">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    
+
+                    
+                        <a href="/data-management-book/flow/" class="navigation navigation-next navigation-unique" aria-label="Next page: Flow">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    
+                </div>
+            </div>
+
+            <script>
+            var gitbook = gitbook || [];
+            gitbook.push(function() {
+                gitbook.page.hasChanged({
+    "page": {
+        "title": "Introduction",
+        "level": "1.1",
+        "depth": 1,
+        
+        "next": {
+            "title": "Flow",
+            "level": "1.2",
+            "depth": 1,
+            "path": "_documentation/flow.md",
+            "ref": "_documentation/flow.md",
+            "articles": []
+        },
+        
+        "dir": "ltr"
+    },    "config": {
+        "plugins": ["fontsettings", "highlight", "livereload", "lunr", "search", "sharing", "theme-default", "livereload"],
+        "styles": {
+            "ebook": "styles/ebook.css",
+            "epub": "styles/epub.css",
+            "mobi": "styles/mobi.css",
+            "pdf": "styles/pdf.css",
+            "print": "styles/print.css",
+            "website": "styles/website.css"
+        },
+        "pluginsConfig": {
+            "expandable-chapter-small2": {
+                "articlesExpand": true,
+            },
+            "fontsettings": {
+                "family": "sans",
+                "size": 2,
+                "theme": "white"
+            },
+            "highlight": {},
+            "livereload": {},
+            "lunr": {
+                "ignoreSpecialCharacters": false,
+                "maxIndexSize": 1000000
+            },
+            "search": {},            "sharing": {
+                "facebook": true,
+
+                "google": false,
+
+                "github": true,
+              
+                "github_link": "https://github.com",
+              
+
+                "telegram": false,
+                "telegram_link": "https://t.me",
+
+                "instapaper": false,
+
+                "twitter": true,
+              
+
+                "vk": false,
+
+                "weibo": false,
+
+                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+            },
+"theme-default": {
+                "showLevel": false,
+                "styles": {
+                    "ebook": "styles/ebook.css",
+                    "epub": "styles/epub.css",
+                    "mobi": "styles/mobi.css",
+                    "pdf": "styles/pdf.css",
+                    "print": "styles/print.css",
+                    "website": "styles/website.css"
+                }
+            },
+        },
+        "theme": "default",
+        "author": "Tao He",
+        "pdf": {
+            "pageNumbers": true,
+            "fontSize": 12,
+            "fontFamily": "Arial",
+            "paperSize": "a4",
+            "chapterMark": "pagebreak",
+            "pageBreaksBefore": "/",
+            "margin": {
+                "right": 62,
+                "left": 62,
+                "top": 56,
+                "bottom": 56
+            }
+        },
+        "structure": {
+            "langs": "LANGS.md",
+            "readme": "README.md",
+        },
+        "variables": {},
+        "title": "EMO-BON Data Management Book",
+        "language": "en",
+        "gitbook": "*"
+    },
+    "file": {
+        "path": "_documentation/entities.md",
+        "mtime": "2025-02-06 00:00:00 +0100",
+        "type": "markdown"
+    },
+    "gitbook": {
+        "version": "3.2.3",
+        "time": "2025-02-06 13:44:24 +0100"
+    },
+    "basePath": "/data-management-book",
+    "book": {
+        "language": ""
+    }
+});
+            });
+            </script> 
+        </div><script src="/data-management-book/assets/gitbook/gitbook.js"></script>
+<script src="/data-management-book/assets/gitbook/theme.js"></script>
+
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-expandable-chapters-small2/expandable-chapters-small.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-search-pro/search.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-sharing/buttons.js"></script>
+<script src="/data-management-book/assets/gitbook/gitbook-plugin-splitter/splitter.js"></script>
+
+<!--
+<script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+<script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+<script src="../gitbook/gitbook-plugin-search/search.js"></script>
+-->
+
+<script src="/data-management-book/assets/gitbook/custom.js"></script>
+<script src="/data-management-book/assets/gitbook/custom-local.js"></script>
+
+</body>
+</html>
