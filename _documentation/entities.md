@@ -6,25 +6,6 @@ category: Jekyll
 layout: post
 ---
 
-Table of content
-1. [RO-Profiles](#ro-profiles)
-2. [Crates](#crates)
-   - [Observatory Crate](#observatory-crate)
-   - [Analysis-Results Crate](#analysis-results-crate)
-   - [Sequencing Crate](#sequencing-crate)
-   - [Governance Crate](#governance-crate)
-3. [Entities](#entities)
-   - [Dataset](#dataset)
-   - [Observatory](#observatory)
-   - [Sample](#sample)
-   - [Sampling Event](#sampling-event)
-   - [Measurements/Observations](#measurementsobservations)
-   - [Sequencing Run](#sequencing-run)
-   - [Batch](#batch)
-   - [Sequence](#sequence)
-   - [Analysis Result](#analysis-result)
-
----
 # RO-Profiles
 
 #### Concept
@@ -48,14 +29,7 @@ RO-profiles encapsulate Research Object (RO) profiles that describe conformity t
 Crates are structured data packages that encapsulate various types of research data. They serve as containers for datasets, metadata, and other related information, ensuring consistency, traceability, and compliance with RO-profiles.
 
 ### Types
-   1. [Governance Crate](#governance-crate)
-   2. [Observatory Crate](#observatory-crate)
-   3. [Analysis-Results Crate](#analysis-results-crate)
-   4. [Sequencing Crate](#sequencing-crate)
-
-Each type of crate has a unique URI structure, is created under specific workflows, and is referenced in corresponding research and administrative contexts.
-
-## 1. Governance Crate
+## Governance Crate
 - **Concept**:  
 Contains information relating to the governance of EMO BON GitHub activities and actions.
 - **Creation & Management**:  
@@ -65,7 +39,7 @@ Contains information relating to the governance of EMO BON GitHub activities and
 - **References**:  
 ?
 
-## 2. Observatory Crate
+## Observatory Crate
 - **Concept**:  
 Holds information about an EMOBON Observatory, its associated sampling events, and the data generated from those events.
 - **Creation & Management**:  
@@ -77,7 +51,7 @@ Holds information about an EMOBON Observatory, its associated sampling events, a
 ?
 
 
-## 3. Analysis-Results Crate
+## Analysis-Results Crate
 - **Concept**:  
 Holds information and data resulting from MetaGOFlow data analysis processes.
 - **Creation & Management**:  
@@ -86,7 +60,7 @@ Holds information and data resulting from MetaGOFlow data analysis processes.
 `https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/{genoscope-code}/`
 - **References**:
 
-## 4. Sequencing Crate
+## Sequencing Crate
 - **Concept**:  
 Holds information and data resulting from sequencing runs.
 - **Creation & Management**:  
@@ -98,16 +72,16 @@ Holds information and data resulting from sequencing runs.
 
 ---
 
-# Entities
+# Data Entities
 
-### Dataset ?
+## Dataset ?
 - **Concept**:  
 A curated collection of data, potentially with a persistent identifier and versioning.
 - **Creation & Management**: Created when structured data is published for reuse.
 - **URI Format**:
 - **References**: 
 
-### Observatory
+## Observatory
 - **Concept**:  
 An EMO BON organisational unit linked to the collection of a specific sample type (e.g. water column, soft sediment) from a fixed, pre-determined location.
 - **Creation & Management**:  
@@ -119,7 +93,7 @@ An EMO BON organisational unit linked to the collection of a specific sample typ
 - **References**:  
 ?
 
-### Sampling Event
+## Sampling Event
 - **Concept**:  
 A sampling action performed at a particular observatory at a specific time, resulting in the collection of one or more samples.
 - **Creation & Management**:  
@@ -129,7 +103,7 @@ A sampling action performed at a particular observatory at a specific time, resu
 - **References**:  
 ?
 
-### Sample
+## Sample
 - **Concept**:  
 A material sample collected during a sampling event.
 - **Creation & Management**:  
@@ -140,7 +114,7 @@ A material sample collected during a sampling event.
 ?
 
 
-### Measurements/Observations
+## Measurements/Observations
 - **Concept**: 
 A measurement or observations made from a sample.
 - **Creation & Management**:  
@@ -150,13 +124,13 @@ A measurement or observations made from a sample.
 - **References**:
 ?
 
-### Sequencing Run
+## Sequencing Run
 - **Concept**: 
 - **Creation & Management**:
 - **URI Format**: `https://data.emobon.embrc.eu/sequencing-run/{run-id}/`
 - **References**: Found in sequencing crates and analysis workflows.
 
-### Batch 
+## Batch 
 - **Concept**:  
 ...
 - **Creation & Management**:  
@@ -166,7 +140,7 @@ A measurement or observations made from a sample.
 - **References**:  
 ?
 
-### Sequence
+## Sequence
 - **Concept**:  
 ...
 - **Creation & Management**:  
@@ -175,7 +149,7 @@ A measurement or observations made from a sample.
 `https://data.emobon.embrc.eu/sequence/{sequence-id}/`
 - **References**: 
 
-### Analysis Result
+## Analysis Result
 - **Concept**:  
 ...
 - **Creation & Management**:  
