@@ -15,6 +15,7 @@
         {% endif %}
     </head>
     <body>
+        <div class="book">
 
             {%- include toc-date.html -%}
 
@@ -57,8 +58,10 @@
             gitbook.push(function() {
                 gitbook.page.hasChanged({%- include metadata-post.json.tpl -%});
             });
-            </script> 
+            </script>
         </div>
+
         {%- include footer.html -%}
+
     </body>
 </html>
