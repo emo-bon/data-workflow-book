@@ -1,2 +1,7 @@
-# data-management-book
-repository that contains all documentation relating to data management of emo-bon project
+---
+layout: home
+title: EMO-BON Data Management Book 
+permalink: /
+---
+
+All documentation relating to data management of EMO-BON project.
