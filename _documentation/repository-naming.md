@@ -29,4 +29,4 @@ Avoid use of trailing `s` in folder and repository names, as they don’t provid
 | **\-crate**       | An actual RO-Crate holding data |
 | **\-profile**     | An actual RO-Profile (a crate in its own right) that formally describes the layout/structure of the crates that declare conformance to it |
 | **\-example**     | Indicative of playground nature of the repo. Can be combined with other suffixes (but should be the final one) |
-| **\-docs**        | A larger body of self-contained documentation. Should probably have a reflecting page linking to it from the main website repo |
+| **\-book**        | A larger body of documentation. Grouped and organised with gitbook theme (preferably) and linked from the main website repo via its `_data/books.yml` | 
