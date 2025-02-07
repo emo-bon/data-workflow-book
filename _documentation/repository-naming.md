@@ -26,11 +26,12 @@ Add a `Readme.md` making clear what the repo is intended for.  Add a `LICENSE` t
 
 ## Types of repositories
 
-| Repo suffix       | Type of Repo |
-|-------------------|--------------|
-| **\-crate**       | An actual RO-Crate holding data |
-| **\-profile**     | An actual RO-Profile (a crate in its own right) that formally describes the layout/structure of the crates that declare conformance to it |
-| **\-example**     | Indicative of playground nature of the repo. Can be combined with other suffixes (but should be the final one) |
-| **\-book**        | A larger body of documentation. Grouped and organised with gitbook theme (preferably) and linked from the main website repo via its `_data/books.yml` | 
-| **\-docker**      | Building up a docker-image. Ideally using CI/CD to publish that in [our space on ghcr.io](https://github.com/orgs/emo-bon/packages)  | 
+| Repo suffix            | Description of this « Type of Repo »    |
+|------------------------|-----------------------------------------|
+| **\emo-bon.github.io** | Central repo building the web presence at https://data.emobon.embrc.eu/. From there many of the rest gets linked. |
+| **\-crate**            | An actual RO-Crate holding data |
+| **\-profile**          | An actual RO-Profile (a crate in its own right) that formally describes the layout/structure of the crates that declare conformance to it |
+| **\-example**          | Indicative of playground nature of the repo. Can be combined with other suffixes (but should be the final one) |
+| **\-book**             | A larger body of documentation. Grouped and organised with gitbook theme (preferably) and linked from the main website repo via its `_data/books.yml` | 
+| **\-docker**           | Building up a docker-image. Ideally using CI/CD to publish that in [our space on ghcr.io](https://github.com/orgs/emo-bon/packages)  | 
 
