@@ -6,6 +6,27 @@ category: Jekyll
 layout: post
 ---
 
+Below is a comprehensive overview of the URI namespaces used within EMO-BON, including defined patterns for RO-profile, RO-Crate, and data entity URIs. While ensuring consistency and interoperability, these URI patterns are designed for dereferenceability and publication of EMO-BON Data as static content, (without reliance on a triple store).
+
+### Overview
+
+| Category         | Entity                  | (preliminary) URI Format |
+|-----------------|-------------------------|------------|
+| **RO-Profiles** | Profile         | `https://data.embon.embrc.eu/{name}-profile/{version}` |
+| **RO-Crates**   | Governance Crate        | `https://data.emobon.embrc.eu/governance-crate/` |
+|                 | Observatory Crate       | `https://data.emobon.embrc.eu/observatory-{obsid}-crate` |
+|                 | Analysis-Results Crate  | `https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/` |
+|                 | Sequencing Crate        | `https://data.emobon.embrc.eu/sequencing-crate` |
+| **Data Entities** | Observatory            | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}` |
+|                 | Sampling Event          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}` |
+|                 | Sample                  | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}` |
+|                 | Sample Replicate        | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}` |
+|                 | Observation             | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}` |
+|                 | Batch                   | `http://data.emobon.embrc.eu/shipment/batch/{batchID}` |
+|                 | Sequence Run            | `http://data.emobon.embrc.eu/shipment/batch/{batchID}#SequenceAnalysis` |
+|                 | Taxon                   | N/A |
+|                 | FunctionalAnnotation    | N/A |
+
 ---
 # RO-Profiles
 
