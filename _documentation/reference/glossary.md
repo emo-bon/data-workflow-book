@@ -4,6 +4,7 @@ author: VLIZ OpenScience team
 date: 2025-02-06
 category: Jekyll
 layout: post
+permalink: /documentation/reference/glossary/
 ---
 
 A comprehensive list of terms and definitions used throughout the EMO-BON project.
