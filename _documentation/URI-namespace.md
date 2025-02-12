@@ -10,24 +10,24 @@ Below is a comprehensive overview of the URI namespaces used within EMO-BON, inc
 
 ### Overview
 
-Base URL: `http(s)://data.emobon.embrc.eu`
+base-url: `http(s)://data.emobon.embrc.eu`
 
 | Category         | Entity                  | (preliminary) URI Format |
 |-----------------|-------------------------|------------|
-| **RO-Profiles** | Profile         | `{base-url}/{name}-profile/{version}` |
-| **RO-Crates**   | Governance Crate        | `{base-url}/governance-crate/` |
-|                 | Observatory Crate       | `{base-url}/observatory-{obsid}-crate` |
-|                 | Analysis-Results Crate  | `{base-url}/analysis-results-{cluster}-crate/` |
-|                 | Sequencing Crate        | `{base-url}/sequencing-crate` |
-| **Data Entities** | Observatory            | `{base-url}/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}` |
-|                 | Sampling Event          | `{base-url}/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}` |
-|                 | Sample                  | `{base-url}/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}` |
-|                 | Sample Replicate        | `{base-url}/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}` |
-|                 | Observation             | `{base-url}/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}` |
-|                 | Batch                   | `{base-url}/shipment/batch/{batchID}` |
-|                 | Sequence Run            | `{base-url}/shipment/batch/{batchID}#SequenceAnalysis` |
-|                 | Taxon                   | tbd |
-|                 | FunctionalAnnotation    | tbd |
+| **[RO-Profiles](#ro-profiles)** | [Profile](#ro-profiles)         | `{base-url}/{name}-profile/{version}` |
+| **[RO-Crates](#ro-crates)**   | [Governance Crate](#governance-crate)        | `{base_url}/governance-crate/` |
+|                 | [Observatory Crate](#observatory-crate)       | `{base_url}/observatory-{obsid}-crate` |
+|                 | [Analysis-Results Crate](#analysis-results-crate)  | `{base_url}/analysis-results-{cluster}-crate/` |
+|                 | [Sequencing Crate](#sequencing-crate)        | `{base_url}/sequencing-crate` |
+| **[Data Entities](#data-entities)** | [Observatory](#observatory)            | `{base_url}/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}` |
+|                 | [Sampling Event](#sampling-event)          | `{base_url}/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}` |
+|                 | [Sample](#sample)                  | `{base_url}/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}` |
+|                 | [Sample Replicate](#sample-replicate)        | `{base_url}/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}` |
+|                 | [Observation](#observation)             | `{base_url}/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}` |
+|                 | [Batch](#batch)                   | `{base_url}/shipment/batch/{batchID}` |
+|                 | [Sequence Run](#sequence-run)            | `{base_url}/shipment/batch/{batchID}#SequenceAnalysis` |
+|                 | [Taxon](#taxon)                   | N/A |
+|                 | [FunctionalAnnotation](#functionalannotation)    | N/A |
 
 ---
 # RO-Profiles
@@ -39,9 +39,6 @@ RO-profiles encapsulate Research Object (RO) profiles that describe conformity t
 `https://data.embon.embrc.eu/{name}-profile/{version}`
   - `{name}`:  observatory \| sequencing \| analysis-results 
   - `{version}`: `latest` or a specific version vM.m.p. (e.g., `v1.0.0`)
-- **References**:  
-Used as metadata descriptors for crates that comply with specific profile expectations.
-
 
 ---
 # RO-Crates
