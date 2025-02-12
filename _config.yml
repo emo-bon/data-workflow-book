@@ -50,17 +50,18 @@ exclude:
   - _drafts
 
 collections:
-  documentation:
+  systems-overview:
     output: true
     permalink: /documentation/:path/
-    order:
-      - systems-overview/dataflow.md
-      - systems-overview/components-interaction.md
-      - reference/glossary.md
-      - reference/uri-namespace.md
-      - reference/software-components/devops-admin.md
-      - conventions/gh/naming.md
-      - conventions/gh/general-content.md
+  reference:
+    output: true
+    permalink: /documentation/:path/
+  conventions:
+    output: true
+    permalink: /documentation/:path/
+#  documentation:
+#    output: true
+#    permalink: /documentation/:path/
 
 
 #ordered_collections:
