@@ -6,6 +6,13 @@ category: Jekyll
 layout: post
 ---
 
+<style>
+table {
+  width: 100%;
+  margin: 3px 0;
+}
+</style>
+
 Below is a comprehensive overview of the URI namespaces used within EMO-BON, including defined patterns for RO-profile, RO-Crate, and data entity URIs. While ensuring consistency and interoperability, these URI patterns are designed for dereferenceability and publication of EMO-BON Data as static content, (without reliance on a triple store).
 
 ### Overview
