@@ -1,7 +1,7 @@
 ---
 layout: home
-title: EMO-BON Data Management Book 
+title: EMO-BON Data Handbook 
 permalink: /
 ---
 
-All documentation relating to data management of EMO-BON project.
+ A comprehensive reference to our EMO-BON data management, covering naming conventions, workflow descriptions, URI namespace documentation, glossary terms, and DevOps guidelines.
