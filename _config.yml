@@ -1,6 +1,6 @@
 # Configurations
-title:            EMO-BON Data Handbook
-longtitle:        EMO-BON Data Handbook
+title:            EMO-BON Data Management Handbook
+longtitle:        EMO-BON Data Management Handbook
 author:           VLIZ Open Science team
 email:            opsci@vliz.be
 description: >
@@ -10,7 +10,7 @@ version:          1.0
 gitbook_version:  3.2.3
 
 url:              'https://https://data.emobon.embrc.eu/'
-baseurl:          '/data-handbook'
+baseurl:          '/data-management-book'
 rss:              RSS
 
 # bootstrap: use the remote theme for the site itself

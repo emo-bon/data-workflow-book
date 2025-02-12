@@ -1,6 +1,6 @@
 ---
 layout: home
-title: EMO-BON Data Handbook 
+title: EMO-BON Data Management Handbook 
 permalink: /
 ---
 
