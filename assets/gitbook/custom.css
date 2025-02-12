@@ -1,6 +1,11 @@
 ---
 ---
 
+.book {
+    margin-top: -80px;
+    z-index: 11111;
+}
+
 .book-body {
     overflow-y: scroll;
 }
@@ -62,7 +67,9 @@
 }
 
 .page-inner {
-    max-width: {{ site.page_width | default: '800px' }};
+    max-width: {{ site.page_width | default: '100%' }};
+    margin-left: 45px;
+    margin-right: 45px;
 }
 
 .back-to-top {

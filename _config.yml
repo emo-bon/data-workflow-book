@@ -62,7 +62,6 @@ ordered_collections:
   #- others
   #- posts
 
-page_width: 800px
 
 destination:      ./_site
 incremental:      false
