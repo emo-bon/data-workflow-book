@@ -26,22 +26,22 @@ Base URL: `http(s)://data.emobon.embrc.eu`
 |                 | Observation             | `{base-url}/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}` |
 |                 | Batch                   | `{base-url}/shipment/batch/{batchID}` |
 |                 | Sequence Run            | `{base-url}/shipment/batch/{batchID}#SequenceAnalysis` |
-|                 | Taxon                   | N/A |
-|                 | FunctionalAnnotation    | N/A |
+|                 | Taxon                   | tbd |
+|                 | FunctionalAnnotation    | tbd |
 
 ---
 # RO-Profiles
 
-RO-profiles encapsulate Research Object (RO) profiles that describe conformity to a fixed set of expectations for data structures. They ensure consistency in the way research data is formatted and provide practical assets such as templates, SHACL files, documentation, and other reference materials. (More information available at: [Ro Crate profiles](https://www.researchobject.org/ro-crate/specification/1.2-DRAFT/profiles.html))
-
+RO-profiles encapsulate Research Object (RO) profiles that describe conformity to a fixed set of expectations for data structures. They ensure consistency in the way research data is formatted and provide practical assets such as templates, SHACL files, documentation, and other reference materials. Used as metadata descriptors for crates that comply with specific profile expectations, RO-profiles help standardize research data management. More information is available at: [Ro Crate profiles](https://www.researchobject.org/ro-crate/specification/1.2-DRAFT/profiles.html).
+- **Creation & Management**:  
+`https://github.com/emo-bon/{name}-profile`
 - **URI Format**:  
 `https://data.embon.embrc.eu/{name}-profile/{version}`
-  - `{name}`: [ observatory \| sequencing \| analysis-results ]
+  - `{name}`:  observatory \| sequencing \| analysis-results 
   - `{version}`: `latest` or a specific version vM.m.p. (e.g., `v1.0.0`)
 - **References**:  
 Used as metadata descriptors for crates that comply with specific profile expectations.
-- **Creation & Management**:  
-`https://github.com/emo-bon/{name}-profile`
+
 
 ---
 # RO-Crates
@@ -53,56 +53,37 @@ Crates are structured data packages that encapsulate various types of research d
 Contains information relating to the governance of EMO BON GitHub activities and actions.
 - **URI Format**:  
 `https://data.emobon.embrc.eu/governance-crate/`
-- **Included Graph Entities**:  
-tbd
 - **Creation & Management**:  
 `https://github.com/emo-bon/governance-crate/`
 
 ## Observatory Crate
 - **Concept**:  
 Holds information about an EMOBON Observatory, its associated sampling events, and the data generated from those events.
+- **Creation & Management**:  
+`https://github.com/emo-bon/observatory-{obsid}-crate/`
 - **URI Format**:  
 `https://data.emobon.embrc.eu/observatory-{obsid}-crate`
   - `{obsid}` = ...
-- **Generated Files**:
-  - `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`
-    - Data entities: Observatory
-  - `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}`
-    - Data entities: Observations
-  - `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}`
-    - Data entities: Sampling event, Sample, Sample replicate
-- **Included Data Entities**:  
-  - Observatory
-  - Sample
-  - Sample Replicate
-  - Observation
-- **Creation & Management**:  
-`https://github.com/emo-bon/observatory-{obsid}-crate/`
+
 
 ## Analysis-Results Crate
 - **Concept**:  
 Holds information and data resulting from MetaGOFlow data analysis processes.
+- **Creation & Management**:  
+`https://github.com/emo-bon/analysis-results-{cluster}-crate/`
 - **URI format**:  
 `https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/`
   - `{cluster}` = ...
-- **Included Graph Entities**:
-  - Sample Replicate
-  - Taxon
-  - FunctionalAnnotation
-- **Creation & Management**:  
-`https://github.com/emo-bon/analysis-results-{cluster}-crate/`
 
 ## Sequencing Crate
 - **Concept**:  
 Holds information and data resulting from sequencing runs.
-- **URI format**:  
-`https://data.emobon.embrc.eu/sequencing-crate`
-- **Included Graph Entities**:
-  - Sample Replicate
-  - Batch
-  - Sequence Run
 - **Creation & Management**:  
 `https://github.com/emo-bon/sequencing-crate`
+- **URI format**:  
+`https://data.emobon.embrc.eu/sequencing-crate`
+
+
 ---
 
 # Data Entities
@@ -172,10 +153,10 @@ A measurement or observations made from a sample.
 - **Concept**:  
 ...
 - **URI Format**:  
-N/A  
+tbd  
 
 ## FunctionalAnnotation
 - **Concept**:  
 ...
 - **URI Format**:  
-N/A  
+tbd  
