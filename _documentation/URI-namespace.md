@@ -10,20 +10,22 @@ Below is a comprehensive overview of the URI namespaces used within EMO-BON, inc
 
 ### Overview
 
+Base URL: `http(s)://data.emobon.embrc.eu`
+
 | Category         | Entity                  | (preliminary) URI Format |
 |-----------------|-------------------------|------------|
-| **RO-Profiles** | Profile         | `https://data.embon.embrc.eu/{name}-profile/{version}` |
-| **RO-Crates**   | Governance Crate        | `https://data.emobon.embrc.eu/governance-crate/` |
-|                 | Observatory Crate       | `https://data.emobon.embrc.eu/observatory-{obsid}-crate` |
-|                 | Analysis-Results Crate  | `https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/` |
-|                 | Sequencing Crate        | `https://data.emobon.embrc.eu/sequencing-crate` |
-| **Data Entities** | Observatory            | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}` |
-|                 | Sampling Event          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}` |
-|                 | Sample                  | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}` |
-|                 | Sample Replicate        | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}` |
-|                 | Observation             | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}` |
-|                 | Batch                   | `http://data.emobon.embrc.eu/shipment/batch/{batchID}` |
-|                 | Sequence Run            | `http://data.emobon.embrc.eu/shipment/batch/{batchID}#SequenceAnalysis` |
+| **RO-Profiles** | Profile         | `{base-url}/{name}-profile/{version}` |
+| **RO-Crates**   | Governance Crate        | `{base-url}/governance-crate/` |
+|                 | Observatory Crate       | `{base-url}/observatory-{obsid}-crate` |
+|                 | Analysis-Results Crate  | `{base-url}/analysis-results-{cluster}-crate/` |
+|                 | Sequencing Crate        | `{base-url}/sequencing-crate` |
+| **Data Entities** | Observatory            | `{base-url}/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}` |
+|                 | Sampling Event          | `{base-url}/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}` |
+|                 | Sample                  | `{base-url}/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}` |
+|                 | Sample Replicate        | `{base-url}/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}` |
+|                 | Observation             | `{base-url}/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}` |
+|                 | Batch                   | `{base-url}/shipment/batch/{batchID}` |
+|                 | Sequence Run            | `{base-url}/shipment/batch/{batchID}#SequenceAnalysis` |
 |                 | Taxon                   | N/A |
 |                 | FunctionalAnnotation    | N/A |
 
