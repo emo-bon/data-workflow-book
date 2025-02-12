@@ -52,15 +52,21 @@ exclude:
 collections:
   documentation:
     output: true
-    permalink: /:path/
-#  others:
-#    output: true
-#    permalink: /:collection/:path/
+    permalink: /documentation/:path/
+    order:
+      - systems-overview/dataflow.md
+      - systems-overview/components-interaction.md
+      - reference/glossary.md
+      - reference/uri-namespace.md
+      - reference/software-components/devops-admin.md
+      - conventions/gh/naming.md
+      - conventions/gh/general-content.md
 
-ordered_collections:
-  - documentation
-  #- others
-  #- posts
+
+#ordered_collections:
+#  - documentation
+#  #- others
+#  #- posts
 
 
 destination:      ./_site

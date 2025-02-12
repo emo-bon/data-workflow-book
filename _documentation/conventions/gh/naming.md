@@ -1,5 +1,5 @@
 ---
-title: Repository naming
+title: Naming
 author: VLIZ OpenScience team
 date: 2025-02-06
 category: Jekyll

@@ -1,5 +1,5 @@
 ---
-title: Devops
+title: Devops admin
 author: VLIZ OpenScience team
 date: 2025-02-06
 category: Jekyll
