@@ -50,18 +50,19 @@ exclude:
   - _drafts
 
 collections:
-  documentation:
+  systems-overview:
     output: true
-    permalink: /documentation/:path/
-#  systems-overview:
+    permalink: /systems-overview/:path/
+  reference:
+    output: true
+    permalink: /reference/:path/
+  conventions:
+    output: true
+    permalink: /conventions/:path/
+#  documentation:
 #    output: true
 #    permalink: /documentation/:path/
-#  reference:
-#    output: true
-#    permalink: /documentation/:path/
-#  conventions:
-#    output: true
-#    permalink: /documentation/:path/
+
 
 #ordered_collections:
 #  - documentation
