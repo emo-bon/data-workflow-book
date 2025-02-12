@@ -1,5 +1,5 @@
 ---
-title: Entities
+title: URI Namespace
 author: VLIZ OpenScience team
 date: 2025-02-06
 category: Jekyll
@@ -21,7 +21,7 @@ Used as metadata descriptors for crates that comply with specific profile expect
 `https://github.com/emo-bon/{name}-profile`
 
 ---
-# Crates
+# RO-Crates
 
 Crates are structured data packages that encapsulate various types of research data. They serve as containers for datasets, metadata, and other related information, ensuring consistency, traceability, and compliance with RO-profiles. Within the EMO-BON ecosystem, we categorize crates into different types, each serving a specific purpose:
 
@@ -39,12 +39,16 @@ tbd
 - **Concept**:  
 Holds information about an EMOBON Observatory, its associated sampling events, and the data generated from those events.
 - **URI Format**:  
-`https://data.emobon.embrc.eu/observatory-{obsid}-crate/{environment}/{logsheet-type}/{source_mat_id}`
+`https://data.emobon.embrc.eu/observatory-{obsid}-crate`
   - `{obsid}` = ...
-  - `{environment}` = [ water \| sediment ]...
-  - `{logsheet-type}` = [ observatory \| sampling \| measured ]...
-  - `{source_mat_id}` = ...
-- **Included Graph Entities**:  
+- **Generated Files**:
+  - `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`
+    - Data entities: Observatory
+  - `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}`
+    - Data entities: Observations
+  - `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}`
+    - Data entities: Sampling event, Sample, Sample replicate
+- **Included Data Entities**:  
   - Observatory
   - Sample
   - Sample Replicate
@@ -56,10 +60,8 @@ Holds information about an EMOBON Observatory, its associated sampling events, a
 - **Concept**:  
 Holds information and data resulting from MetaGOFlow data analysis processes.
 - **URI format**:  
-`https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/{source_mat_id}/{source_mat_id}-{product}/`
+`https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/`
   - `{cluster}` = ...
-  - `{source_mat_id}` = ...
-  - `{product}` = [ taxon \| functionalAnnotation ] ...
 - **Included Graph Entities**:
   - Sample Replicate
   - Taxon
@@ -71,9 +73,7 @@ Holds information and data resulting from MetaGOFlow data analysis processes.
 - **Concept**:  
 Holds information and data resulting from sequencing runs.
 - **URI format**:  
-`https://data.emobon.embrc.eu/sequencing-crate/shipment/batch-{batchID}/{source_mat_id}`
-  - `{batchID}` = ...
-  - `{source_mat_id}` = ...
+`https://data.emobon.embrc.eu/sequencing-crate`
 - **Included Graph Entities**:
   - Sample Replicate
   - Batch
@@ -82,7 +82,7 @@ Holds information and data resulting from sequencing runs.
 `https://github.com/emo-bon/sequencing-crate`
 ---
 
-# Entities
+# Data Entities
 
 The RDF-based triple files within each crate collectively form the EMO-BON data graph, with entities as its core components. Each entity has a unique URI and is defined by properties and connections to other entities. This ensures structured data, consistent referencing within the knowledge graph, and allows for efficient data retrieval and analysis within the EMO-BON ecosystem. Below is an overview of the primary entities, their roles, and their respective URI formats.
 
@@ -90,7 +90,7 @@ The RDF-based triple files within each crate collectively form the EMO-BON data 
 - **Concept**:  
 An EMO BON organisational unit linked to the collection of a specific sample type (e.g. water column, soft sediment) from a fixed, pre-determined location.
 - **URI Format**:  
-`http://data.emobon.embrc.eu/observatory/{obsid}/{env_package}`
+`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`
   - `{obsid}`: ...
   - `{env_package}`: ...
 
@@ -98,29 +98,36 @@ An EMO BON organisational unit linked to the collection of a specific sample typ
 - **Concept**:  
 A sampling action performed at a particular observatory at a specific time, resulting in the collection of one or more samples.
 - **URI Format**:  
-`http://data.emobon.embrc.eu/sampling/{sampling_event}`
+`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}`
+  - `{obsid}`: ...
+  - `{env_package}`: ...
   - `{sampling_event}`: ...
 
 ## Sample
 - **Concept**:  
 A material sample collected during a sampling event.
 - **URI Format**:  
-`http://data.emobon.embrc.eu/sample/{source_mat_id}`
+`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}`
+  - `{obsid}`: ...
+  - `{env_package}`: ...
   - `{source_mat_id}`: ...
 
 ## Sample Replicate
 - **Concept**:  
 A material sample collected during a sampling event.
 - **URI Format**:  
-`http://data.emobon.embrc.eu/sample/{source_mat_id}/{replicate}`
+`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}`
+  - `{obsid}`: ...
+  - `{env_package}`: ...
   - `{source_mat_id}`: ...
-  - `{replicate}`: ...
 
 ## Observation
 - **Concept**:  
 A measurement or observations made from a sample.
 - **URI Format**:  
-`http://data.emobon.embrc.eu/observation/{source_mat_id}#{observedProperty}`
+`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}`
+  - `{obsid}`: ...
+  - `{env_package}`: ...
   - `{source_mat_id}`: ...
   - `{observedProperty}`: ...
 
@@ -128,14 +135,15 @@ A measurement or observations made from a sample.
 - **Concept**:  
 ...
 - **URI Format**:  
-`https://data.emobon.embrc.eu/batch/{batchID}`
+`http://data.emobon.embrc.eu/shipment/batch/{batchID}`
   - `{batchID}`: ...
 
 ## Sequence Run
 - **Concept**:  
 ...
-- **URI Format**: `https://data.emobon.embrc.eu/batch/{batchID}#SequenceAnalysis`
-  - `{batchID}`: ...
+- **URI Format**:  
+`http://data.emobon.embrc.eu/shipment/batch/{batchID}#SequenceAnalysis`
+  - `{batchID}`:  ...
 
 ## Taxon
 - **Concept**:  
