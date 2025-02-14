@@ -35,8 +35,8 @@ base-url: `http(s)://data.emobon.embrc.eu`
 || Sample | `/observatory-{obs_id}-crate` | `/{env_package}/sample/{source_mat_id}` |  |
 || Observation | `/observatory-{obs_id}-crate` | `/{env_package}/observation/{source_mat_id}` | `#{observedProperty}` |
 |  |  |  |  |
-|| *taxon* | `/analysis-results-{cluster}-crate` | *`/taxon-summary`* |  |
-|| *functionalannotation* | `/analysis-results-{cluster}-crate` | *`/data-products`* |  |
+|| Taxon summary | `/analysis-results-{cluster}-crate` | `/{genoscopeID}/taxonomy-summary` |  |
+|| Functional annotation | `/analysis-results-{cluster}-crate` | `/{genoscopeID}/functional-annotation` | `#{annotationID}` |
 |  |  |  |  |
 || *batch* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* |  |
 || *sequence-run* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* | *`#SequenceAnalysis`* |
