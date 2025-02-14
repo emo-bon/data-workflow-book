@@ -20,34 +20,27 @@ Below is a comprehensive overview of the URI namespaces used within EMO-BON, inc
 
 base-url: `http(s)://data.emobon.embrc.eu`
 
-#### RO-Profiles
+|  | Type  | Repository (`/repository`) | Path (`/nested-file-path.extension`) | Fragment Identifier (`#fragment-identifier`) | 
+|---------|---------|-----------------------------|-----------------------------|----------------------------------|
+| **RO-Profiles** |  |  |  |
+|| ro-profiles | `/{name}-profile` | `/{version}` |  |
+| **RO-Crates** |  |  |  |
+|| governance-crate | `/governance-crate` |  |  |
+|| observatory-crate | `/observatory-{obsid}-crate` |  |  |
+|| analysis-results-crate | `/analysis-results-{cluster}-crate` |  |  |
+|| sequencing-crate | `/sequencing-crate` |  |  |
+| **Data Entities** |  |  |  |
+|| Observatory | `/observatory-{obs_id}-crate` | `/{env_package}/observatory/{obs_id}` |  |
+|| Sampling event | `/observatory-{obs_id}-crate` | `/{env_package}/sampling/{sampling_event}` |  |
+|| Sample | `/observatory-{obs_id}-crate` | `/{env_package}/sample/{source_mat_id}` |  |
+|| Observation | `/observatory-{obs_id}-crate` | `/{env_package}/observation/{source_mat_id}` | `#{observedProperty}` |
+|  |  |  |  |
+|| *taxon* | `/analysis-results-{cluster}-crate` | *`/taxon-summary`* |  |
+|| *functionalannotation* | `/analysis-results-{cluster}-crate` | *`/data-products`* |  |
+|  |  |  |  |
+|| *batch* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* |  |
+|| *sequence-run* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* | *`#SequenceAnalysis`* |
 
-| Entity  | URI Format |
-|---------|------------|
-| [Profile](#ro-profiles) | `./{name}-profile/{version}` |
-
-#### RO-Crates
-
-| Entity  | URI Format |
-|---------|------------|
-| [Governance Crate](#governance-crate) | `./governance-crate/` |
-| [Observatory Crate](#observatory-crate) | `./observatory-{obsid}-crate` |
-| [Analysis-Results Crate](#analysis-results-crate) | `./analysis-results-{cluster}-crate/` |
-| [Sequencing Crate](#sequencing-crate) | `./sequencing-crate` |
-
-#### Data Entities
-
-| Entity  | URI Format |
-|---------|------------|
-| [Observatory](#observatory) | `./observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}` |
-| [Sampling Event](#sampling-event) | `./observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}` |
-| [Sample](#sample) | `./observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}` |
-| [Sample Replicate](#sample-replicate) | `./observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}` |
-| [Observation](#observation) | `./observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}` |
-| [Batch](#batch) | `./shipment/batch/{batchID}` |
-| [Sequence Run](#sequence-run) | `./shipment/batch/{batchID}#SequenceAnalysis` |
-| [Taxon](#taxon) | N/A |
-| [FunctionalAnnotation](#functionalannotation) | N/A |
 
 ---
 # RO-Profiles
