@@ -1,10 +1,10 @@
 # Configurations
-title:            EMO-BON Data Management Handbook
-longtitle:        EMO-BON Data Management Handbook
+title:            EMO-BON Data Workflow Handbook
+longtitle:        EMO-BON Data Workflow Handbook
 author:           VLIZ Open Science team
 email:            opsci@vliz.be
 description: >
-  All documents related to the data management of the Emo-Bon project.
+  All documents related to the data workflow of the Emo-Bon project.
 
 version:          1.0
 gitbook_version:  3.2.3
