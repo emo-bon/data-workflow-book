@@ -18,28 +18,34 @@ Below is a comprehensive overview of the URI namespaces used within EMO-BON, inc
 
 ### Overview
 
-base-url: `http(s)://data.emobon.embrc.eu`
+Notes:
+* the base-url for all these is `http(s)://data.emobon.embrc.eu`
 
-|  | Type  | Repository (`/repository`) | Path (`/nested-file-path.extension`) | Fragment Identifier (`#fragment-identifier`) | 
-|---------|---------|-----------------------------|-----------------------------|----------------------------------|
+| For Entities of Type | URI split into `/repository` part | `/path-to/file.ext` part | `#fragment-identifier` part | 
+|----------------------|-----------------------------------|--------------------------|-----------------------------|
 | **RO-Profiles** |  |  |  |
-|| ro-profiles | `/{name}-profile` | `/{version}` |  |
+| ro-profiles | `/{name}-profile` | `/{version}` |  |
 | **RO-Crates** |  |  |  |
-|| governance-crate | `/governance-crate` |  |  |
-|| observatory-crate | `/observatory-{obsid}-crate` |  |  |
-|| analysis-results-crate | `/analysis-results-{cluster}-crate` |  |  |
-|| sequencing-crate | `/sequencing-crate` |  |  |
+| governance-crate | `/governance-crate` |  |  |
+| observatory-crate | `/observatory-{obsid}-crate` |  |  |
+| analysis-results-crate | `/analysis-results-{cluster}-crate` |  |  |
+| sequencing-crate | `/sequencing-crate` |  |  |
 | **Data Entities** |  |  |  |
-|| Observatory | `/observatory-{obs_id}-crate` | `/{env_package}/observatory/{obs_id}` |  |
-|| Sampling event | `/observatory-{obs_id}-crate` | `/{env_package}/sampling/{sampling_event}` |  |
-|| Sample | `/observatory-{obs_id}-crate` | `/{env_package}/sample/{source_mat_id}` |  |
-|| Observation | `/observatory-{obs_id}-crate` | `/{env_package}/observation/{source_mat_id}` | `#{observedProperty}` |
+| Observatory | `/observatory-{obs_id}-crate` | `/{env_package}/observatory/{obs_id}` |  |
+| Sampling event | `/observatory-{obs_id}-crate` | `/{env_package}/sampling/{sampling_event}` |  |
+| Sample | `/observatory-{obs_id}-crate` | `/{env_package}/sample/{source_mat_id}` |  |
+| Observation | `/observatory-{obs_id}-crate` | `/{env_package}/observation/{source_mat_id}` | `#{observedProperty}` |
 |  |  |  |  |
-|| Taxon summary | `/analysis-results-{cluster}-crate` | `/{genoscopeID}/taxonomy-summary` |  |
-|| Functional annotation | `/analysis-results-{cluster}-crate` | `/{genoscopeID}/functional-annotation` | `#{annotationID}` |
+| Taxon summary | `/analysis-results-{cluster}-crate` | `/{genoscopeID}/taxonomy-summary` |  |
+| Functional annotation | `/analysis-results-{cluster}-crate` | `/{genoscopeID}/functional-annotation` | `#{annotationID}` |
 |  |  |  |  |
-|| *batch* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* |  |
-|| *sequence-run* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* | *`#SequenceAnalysis`* |
+| *batch* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* |  |
+| *sequence-run* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* | *`#SequenceAnalysis`* |
+
+Note - TODO - a similar overview could be useful for the most important external things we refer to
+- ena entities by «accession no» :: `https://www.ebi.ac.uk/ena/browser/view/{accession no}` 
+- S3 objects stored via dvc :: `https://TBD` 
+- other?
 
 
 ---
