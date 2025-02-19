@@ -20,6 +20,7 @@ toc:
   enabled: true
   h_min:   1
   h_max:   5
+  no_toc_section_class: no_toc_section
 
 # customize the link favicon in header, will be {{site.baseurl}}/{{site.favicon_path}}
 favicon_path:     /assets/gitbook/images/favicon.ico
@@ -48,17 +49,21 @@ markdown_ext:             markdown,mkdown,mkdn,mkd,md
 
 exclude:
   - _drafts
+  - _documentation/_*.md
+
+
+#collections:
+#  documentation:
+#    output: true
+#    permalink: /documentation/:path/
 
 collections:
   documentation:
+    order: 
+      - systems-overview/index.md
+      - reference/index.md
+      - conventions/index.md
     output: true
-    permalink: /documentation/:path/
-
-#ordered_collections:
-#  - documentation
-#  #- others
-#  #- posts
-
 
 destination:      ./_site
 incremental:      false

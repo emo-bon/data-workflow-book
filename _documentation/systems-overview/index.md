@@ -1,13 +1,14 @@
 ---
-title: Dataflow
+title: Systems overview
 author: VLIZ OpenScience team
 date: 2025-02-06
 category: Jekyll
 layout: post
-permalink: /documentation/systems-overview/dataflow/
+permalink: /documentation/systems-overview/
 ---
 
-# to do
+## Dataflow
+
 - system set-up:
     - create governance crate & data space repository (the one creating the site = emo-bon.github.io)
     - manual entries in governance-crate listing GH sheets by id and observatories
@@ -53,3 +54,7 @@ permalink: /documentation/systems-overview/dataflow/
 - how to consume data & api
     - todo: UDAL named queries 
     - todo: VREs consuming those via sema query + udal
+
+## Components Interaction
+
+Description fo components-interactions
