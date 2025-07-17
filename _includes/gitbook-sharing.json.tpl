@@ -1,28 +1,16 @@
             "sharing": {
-                "facebook": true,
-
-                "google": false,
-
-                "github": true,
               {% if site.github_username %}
+                "github": true,
                 "github_link": "https://github.com/{{ site.github_username }}",
               {% else %}
                 "github_link": "https://github.com",
+                "github": false,
               {% endif %}
-
-                "telegram": false,
-                "telegram_link": "https://t.me",
-
-                "instapaper": false,
-
-                "twitter": true,
               {% if site.twitter_username %}
+                "twitter": true,
                 "twitter_link": "https://twitter.com/{{ site.twitter_username }}",
+              {% else %}
+                "twitter": false,
               {% endif %}
-
-                "vk": false,
-
-                "weibo": false,
-
-                "all": ["facebook", "google", "twitter", "weibo", "instapaper", "github", "telegram"]
+                "all": ["twitter","github"]
             },
