@@ -66,11 +66,12 @@ table {
 Below is a comprehensive overview of the URI namespaces used within EMO-BON, including defined patterns for RO-profile, RO-Crate, and data entity URIs. While ensuring consistency and interoperability, these URI patterns are designed for dereferenceability and publication of EMO-BON Data as static content, (without reliance on a triple store).
 
 ### Overview
+All entities in emo-bon follow a consistent URI pattern.  
+Each URI begins with the base `http(s)://data.emobon.embrc.eu`
+and is extended with a path segment specific to the entity type:
 
-Notes:
-* the base-url for all these is `http(s)://data.emobon.embrc.eu`
 
-| For Entities of Type | URI split into `/repository` part | `/path-to/file.ext` part | `#fragment-identifier` part | 
+| Entity type | `/repository` | `/path-to/file.extension` | `#fragment-identifier` | 
 |----------------------|-----------------------------------|--------------------------|-----------------------------|
 | **RO-Profiles** |  |  |  |
 | ro-profiles | `/{name}-profile` | `/{version}` |  |
