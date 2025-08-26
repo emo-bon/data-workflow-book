@@ -98,6 +98,32 @@ Note - TODO - a similar overview could be useful for the most important external
 - other?
 
 
+| Entity Type          | URI Format                                                                                                         | Parameter            | Description                                   | Allowed Values                     |
+|---------------------|-------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------------------------------|-----------------------------------|
+| RO-Profile           | `https://data.embon.embrc.eu/{name}-profile/{version}`                                                           | `{name}`            | Name of the profile                           | observatory, sequencing, analysis-results |
+| RO-Profile           | `https://data.embon.embrc.eu/{name}-profile/{version}`                                                           | `{version}`         | Profile version                               | latest or specific version (vM.m.p) |
+| Governance Crate     | `https://data.emobon.embrc.eu/governance-crate/`                                                                 | N/A                 | Governance crate URI has no parameters        |                                   |
+| Observatory Crate    | `https://data.emobon.embrc.eu/observatory-{obsid}-crate`                                                        | `{obsid}`           | Unique observatory ID                          |                                   |
+| Analysis-Results Crate | `https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/`                                              | `{cluster}`         | Unique analysis cluster ID                     |                                   |
+| Sequencing Crate     | `https://data.emobon.embrc.eu/sequencing-crate`                                                                 | N/A                 | Sequencing crate URI has no parameters        |                                   |
+| Observatory          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`                       | `{obs_id}`          | Unique observatory ID                          |                                   |
+| Observatory          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`                       | `{env_package}`     | Environment package                            | e.g., water, sediment             |
+| Sampling Event       | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}`                  | `{obs_id}`          | Unique observatory ID                          |                                   |
+| Sampling Event       | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}`                  | `{env_package}`     | Environment package                            |                                   |
+| Sampling Event       | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}`                  | `{sampling_event}`  | Unique sampling event ID                        |                                   |
+| Sample               | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}`                   | `{obs_id}`          | Unique observatory ID                          |                                   |
+| Sample               | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}`                   | `{env_package}`     | Environment package                            |                                   |
+| Sample               | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}`                   | `{source_mat_id}`   | Unique sample ID                               |                                   |
+| Sample Replicate     | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}`                   | `{obs_id}`          | Unique observatory ID                          |                                   |
+| Sample Replicate     | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}`                   | `{env_package}`     | Environment package                            |                                   |
+| Sample Replicate     | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}`                   | `{source_mat_id}`   | Unique replicate sample ID                     |                                   |
+| Observation          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}`| `{obs_id}`          | Unique observatory ID                          |                                   |
+| Observation          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}`| `{env_package}`     | Environment package                            |                                   |
+| Observation          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}`| `{source_mat_id}`   | Unique sample ID                               |                                   |
+| Observation          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}`| `{observedProperty}`| Name of the observed property                  | e.g., temperature, pH            |
+| Batch                | `http://data.emobon.embrc.eu/shipment/batch/{batchID}`                                                          | `{batchID}`         | Unique batch identifier                         |                                   |
+| Sequence Run         | `http://data.emobon.embrc.eu/shipment/batch/{batchID}#SequenceAnalysis`                                        | `{batchID}`         | Batch ID associated with the sequence run      |                                   |
+
 
 ---
 # RO-Profiles
