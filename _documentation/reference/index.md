@@ -260,9 +260,24 @@ Example: [to include]()
 - S3 objects stored via dvc :: `https://TBD` 
 - other?
 
-## Ontologies 
 
-to contain a description of what we have in this are and where (/ns) they are published
+
+## Ontologies
+
+The EMO-BON project maintains a collection of ontologies and vocabularies published under  
+[`https://data.emobon.embrc.eu/ns/`](https://data.emobon.embrc.eu/ns/).  
+These resources define terms that are specific to the EMO-BON domain and provide a shared language for describing entities, metadata, and results across the ecosystem.  
+
+The collection is organized into several thematic namespaces:
+
+- **governance** — terms relevant to EMO-BON governance, processes, and organizational structures  
+- **product** — terms used to describe taxonomic and functional outputs from analyses of samples 
+- **sampling** — terms for metadata about EMO-BON sampling activities and resulting samples  
+- **core** — terms defining metadata related to EMO-BON observatories  
+- **sequence** — terms used to describe results from sequence analyses  
+
+Each vocabulary provides standard concepts tailored to its context, ensuring consistent, interoperable descriptions throughout the EMO-BON knowledge graph.
+
 
 ## RO-Profiles
 
