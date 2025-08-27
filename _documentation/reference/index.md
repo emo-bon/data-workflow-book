@@ -65,11 +65,10 @@ table {
 
 Below is a comprehensive overview of the URI namespaces used within EMO-BON, including defined patterns for RO-profile, RO-Crate, and data entity URIs. While ensuring consistency and interoperability, these URI patterns are designed for dereferenceability and publication of EMO-BON Data as static content, (without reliance on a triple store).
 
-### Overview
+## Overview - URI path patterns
 All entities in emo-bon follow a consistent URI pattern.  
 Each URI begins with the base `http(s)://data.emobon.embrc.eu`
 and is extended with a path segment specific to the entity type:
-
 
 | Entity type | `/repository` | `/path-to/file.extension` | `#fragment-identifier` | 
 |----------------------|-----------------------------------|--------------------------|-----------------------------|
@@ -82,204 +81,192 @@ and is extended with a path segment specific to the entity type:
 | sequencing-crate | `/sequencing-crate` |  |  |
 | **Data Entities** |  |  |  |
 | Observatory | `/observatory-{obs_id}-crate` | `/{env_package}/observatory/{obs_id}` |  |
-| Sampling event | `/observatory-{obs_id}-crate` | `/{env_package}/sampling/{sampling_event}` |  |
+| Sampling event | `/observatory-{obs_id}-crate` | `/{env_package}/sampling-event/{sampling_event}` |  |
 | Sample | `/observatory-{obs_id}-crate` | `/{env_package}/sample/{source_mat_id}` |  |
 | Observation | `/observatory-{obs_id}-crate` | `/{env_package}/observation/{source_mat_id}` | `#{observedProperty}` |
 |  |  |  |  |
-| Taxon summary | `/analysis-results-{cluster}-crate` | `/{genoscopeID}/taxonomy-summary` |  |
-| Functional annotation | `/analysis-results-{cluster}-crate` | `/{genoscopeID}/functional-annotation` | `#{annotationID}` |
+| Taxon summary | `/analysis-results-{cluster}-crate` | `/taxonomy-summary` | `#{OTU-ID}` |
+| Functional annotation | `/analysis-results-{cluster}-crate` | `/functional-annotation` | `#{rowID}` |
 |  |  |  |  |
 | *batch* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* |  |
 | *sequence-run* | `/sequencing-crate` | *`/shipment/batch/{batchID}`* | *`#SequenceAnalysis`* |
 
-Note - TODO - a similar overview could be useful for the most important external things we refer to
+## Detailed URI path specifications
+Below are detailed tables for each entity type, including parameters, descriptions, allowed values, and example URIs.
+
+
+### RO-Profiles
+{: .no_toc_section }
+
+| Parameter    | Description                  | Allowed Values                               | Example URI |
+|--------------|------------------------------|----------------------------------------------|---------|
+| `{name}`     | Name of the profile          | observatory, sequencing, analysis-results    | observatory |
+| `{version}`  | Profile version              | `latest` or specific version (`vM.m.p`)      | `latest`, `v1.0.0` |
+
+Example(s): 
+- [`https://data.emobon.embrc.eu/observatory-profile/latest/`](https://data.emobon.embrc.eu/observatory-profile/latest/)
+- [`https://data.emobon.embrc.eu/analysis-results-profile/latest/`](https://data.emobon.embrc.eu/analysis-results-profile/latest/)
+- [`https://data.emobon.embrc.eu/sequencing-profile/latest/`](https://data.emobon.embrc.eu/sequencing-profile/latest/)
+
+⚠️ sequencing-profile doesn't exist yet
+
+### Governance Crate
+{: .no_toc_section }
+
+| Parameter | Description                   | Allowed Values | Example |
+|-----------|-------------------------------|----------------|---------|
+| *N/A*  |  |                |          |      |
+
+Example: [https://data.emobon.embrc.eu/governance-crate/](https://data.emobon.embrc.eu/governance-crate/)  
+⚠️ not dereferenceable - doesn't exist yet?
+
+### Observatory Crate
+{: .no_toc_section }
+
+URI pattern: `https://data.emobon.embrc.eu/observatory-{obsid}-crate`
+
+| Parameter  | Description              | Allowed Values | Example |
+|------------|--------------------------|----------------|---------|
+| `{obsid}`  | Unique observatory ID    | free-text IDs  | hcmr-1  |
+
+Example: [https://data.emobon.embrc.eu/observatory-hcmr-1-crate](https://data.emobon.embrc.eu/observatory-hcmr-1-crate)
+
+
+### Analysis-Results Crate
+{: .no_toc_section }
+
+URI pattern: `https://data.emobon.embrc.eu/analysis-results-{cluster}-crate`
+
+| Parameter   | Description                   | Allowed Values | Example |
+|-------------|-------------------------------|----------------|---------|
+| `{cluster}` | Unique analysis cluster ID    | free-text IDs  | cluster-01   |
+
+Example: [https://data.emobon.embrc.eu/analysis-results-cluster-01-crate](https://data.emobon.embrc.eu/analysis-results-cluster-01-crate)  
+⚠️ html likely to need some fixing up?
+
+### Sequencing Crate
+{: .no_toc_section }
+
+| Parameter | Description                   | Allowed Values | Example |
+|-----------|-------------------------------|----------------|---------|
+| *(none)*  | Sequencing crate has no parameters |                |           |
+
+Example: [*to be included*]()  
+⚠️ doesn't exist yet
+
+### Observatory
+{: .no_toc_section }
+
+URI pattern: `http(s)://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`
+
+| Parameter      | Description              | Allowed Values          | Example |
+|----------------|--------------------------|-------------------------|---------|
+| `{obs_id}`     | Unique observatory ID    | free-text IDs           | `hcmr-1` |
+| `{env_package}`| Environment package      | water, sediment, etc.   | `water` |
+
+Example: [http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/observatory/HCMR-1](https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/refs/heads/main/all-triples.ttl)
+
+⚠️ not dereferenceable - included GitHub link to all-triples.ttl   
+⚠️ difference between hcmr-1 and HCMR-1  
+
+### Sampling Event
+{: .no_toc_section }
+
+URI pattern: `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling-event/{sampling_event}`
+
+| Parameter         | Description                  | Allowed Values | Example |
+|-------------------|------------------------------|----------------|---------|
+| `{obs_id}`        | Unique observatory ID        | free-text IDs  | `hcmr-1` |
+| `{env_package}`   | Environment package          | water, sediment | `water` |
+| `{sampling_event}`| Unique sampling event ID     | free-text IDs  | `HCMR-1_Wa_221027` |
+
+Example URI: [http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/sampling-event/HCMR-1_Wa_221027](https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/refs/heads/main/all-triples.ttl)
+
+⚠️ not dereferenceable - included GitHub link to all-triples.ttl   
+⚠️ difference between hcmr-1 and HCMR-1  
+
+### Sample
+{: .no_toc_section }
+
+URI pattern: `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sample/{source_mat_id}`
+
+| Parameter        | Description              | Allowed Values | Example |
+|------------------|--------------------------|----------------|---------|
+| `{obs_id}`       | Unique observatory ID    | free-text IDs  | `hcmr-1` |
+| `{env_package}`  | Environment package      | water, sediment | `water` |
+| `{source_mat_id}`| Unique sample ID         | free-text IDs  | `EMOBON_HCMR-1_Wa_1` |
+
+Example: [http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/sample/EMOBON_HCMR-1_Wa_1](https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/refs/heads/main/all-triples.ttl)
+
+⚠️ not dereferenceable - included GitHub link to all-triples.ttl   
+⚠️ difference between hcmr-1 and HCMR-1  
+
+
+### Observation
+{: .no_toc_section }
+
+URI pattern: `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observation/{source_mat_id}#{observedProperty}`
+
+| Parameter           | Description                  | Allowed Values      | Example |
+|---------------------|------------------------------|---------------------|---------|
+| `{obs_id}`          | Unique observatory ID        | free-text IDs       | `hcmr-1` |
+| `{env_package}`     | Environment package          | water, sediment     | `water` |
+| `{source_mat_id}`   | Unique sample ID             | free-text IDs       | `EMOBON_HCMR-1_Wa_1` |
+| `{observedProperty}`| Name of the observed property| temperature, pH     | `chlorophyll` |
+
+Example: [http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/observation/EMOBON_HCMR-1_Wa_1#chlorophyll](https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/refs/heads/main/all-triples.ttl)
+
+
+### Taxon summary
+{: .no_toc_section }
+
+URI pattern: `http://data.emobon.embrc.eu/analysis-results-{cluster}-crate/taxonomy-summary#{OTU-ID}`
+
+| Parameter     | Description                     | Allowed Values | Example |
+|---------------|---------------------------------|----------------|---------|
+| `{cluster}`   | Unique analysis cluster ID      | free-text IDs  | `` |
+| `{OTU-ID}` | Unique Genoscope identifier   | free-text IDs  | `` |
+
+Example: `to include`  
+
+
+### Functional Annotation
+{: .no_toc_section }
+
+URI-pattern: `http://data.emobon.embrc.eu/analysis-results-{cluster}-cratefunctional-annotation#{rowID}`
+
+| Parameter      | Description                     | Allowed Values | Example |
+|----------------|---------------------------------|----------------|---------|
+| `{cluster}`    | Unique analysis cluster ID      | free-text IDs  | `` |
+| `{rowID}`| ID of row with functional annotation result | index IDs  | `` |
+
+Example: `to include`  
+⚠️ L needs to check whether rowID will be different between annotation types (e.g. GO, IPS, EGGNOG)
+
+### Batch 
+{: .no_toc_section }
+
+| Parameter  | Description                  | Allowed Values | Example |
+|------------|------------------------------|----------------|---------|
+| `{batchID}`| Unique batch identifier      | free-text IDs  | `` |
+
+Example: [to include]()  
+⚠️ doesn't exist yet
+
+### Sequence Run
+{: .no_toc_section }
+
+| Parameter  | Description                  | Allowed Values | Example |
+|------------|------------------------------|----------------|---------|
+| `{batchID}`| Batch ID associated with the sequence run | free-text IDs | `` |
+
+Example: [to include]()  
+⚠️ doesn't exist yet
+
+**TODO Note** - a similar overview could be useful for the most important external things we refer to
 - ena entities by «accession no» :: `https://www.ebi.ac.uk/ena/browser/view/{accession no}` 
 - S3 objects stored via dvc :: `https://TBD` 
 - other?
-
-
-| Entity Type          | URI Format                                                                                                         | Parameter            | Description                                   | Allowed Values                     | Example                                   |
-|---------------------|-------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------------------------------|-----------------------------------|-------------------------------------------|
-| RO-Profile           | `https://data.embon.embrc.eu/{name}-profile/{version}`                                                           |                    |                                               |                                   | [https://data.emobon.embrc.eu/observatory-profile/latest/](https://data.emobon.embrc.eu/observatory-profile/latest/) |
-|                     |                                                                                                                   | `{name}`            | Name of the profile                           | observatory, sequencing, analysis-results |                                           |
-|                     |                                                                                                                   | `{version}`         | Profile version                               | latest or specific version (vM.m.p) |                                           |
-| Governance Crate     | `https://data.emobon.embrc.eu/governance-crate/`                                                                 |                    | Governance crate URI has no parameters        |                                   | [governance-crate](https://data.emobon.embrc.eu/governance-crate/) |
-| Observatory Crate    | `https://data.emobon.embrc.eu/observatory-{obsid}-crate`                                                        |                    |                                               |                                   | [https://data.emobon.embrc.eu/observatory-hcmr-1-crate](https://data.emobon.embrc.eu/observatory-hcmr-1-crate) |
-|                     |                                                                                                                   | `{obsid}`           | Unique observatory ID                          |                                   |                                           |
-| Analysis-Results Crate | `https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/`                                              |                    |                                               |                                   | [analysis-results-clusterA-crate](https://data.emobon.embrc.eu/analysis-results-clusterA-crate/) |
-|                     |                                                                                                                   | `{cluster}`         | Unique analysis cluster ID                     |                                   |                                           |
-| Sequencing Crate     | `https://data.emobon.embrc.eu/sequencing-crate`                                                                 |                    | Sequencing crate URI has no parameters        |                                   | [sequencing-crate](https://data.emobon.embrc.eu/sequencing-crate) |
-| Observatory          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`                     |                    |                                               |                                   | [http://data.emobon.embrc.eu/observatory-HCMR-1-crate/water/observatory/HCMR-1](http://data.emobon.embrc.eu/observatory-HCMR-1-crate/water/observatory/HCMR-1) |
-|                     |                                                                                                                   | `{obs_id}`          | Unique observatory ID                          |                                   |                                           |
-|                     |                                                                                                                   | `{env_package}`     | Environment package                            | e.g., water, sediment             |                                           |
-| Sampling Event       | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}`                |                    |                                               |                                   | [sampling-event EVT-001](http://data.emobon.embrc.eu/observatory-001-crate/water/sampling/EVT-001) |
-|                     |                                                                                                                   | `{obs_id}`          | Unique observatory ID                          |                                   |                                           |
-|                     |                                                                                                                   | `{env_package}`     | Environment package                            |                                   |                                           |
-|                     |                                                                                                                   | `{sampling_event}`  | Unique sampling event ID                        |                                   |                                           |
-| Sample               | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}`                 |                    |                                               |                                   | [sample SMP-001](http://data.emobon.embrc.eu/observatory-001-crate/water/measured/SMP-001) |
-|                     |                                                                                                                   | `{obs_id}`          | Unique observatory ID                          |                                   |                                           |
-|                     |                                                                                                                   | `{env_package}`     | Environment package                            |                                   |                                           |
-|                     |                                                                                                                   | `{source_mat_id}`   | Unique sample ID                               |                                   |                                           |
-| Sample Replicate     | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}`                 |                    |                                               |                                   | [replicate SMP-001-R1](http://data.emobon.embrc.eu/observatory-001-crate/water/sampling/SMP-001-R1) |
-|                     |                                                                                                                   | `{obs_id}`          | Unique observatory ID                          |                                   |                                           |
-|                     |                                                                                                                   | `{env_package}`     | Environment package                            |                                   |                                           |
-|                     |                                                                                                                   | `{source_mat_id}`   | Unique replicate sample ID                     |                                   |                                           |
-| Observation          | `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}` |                    |                                               |                                   | [temperature observation](http://data.emobon.embrc.eu/observatory-001-crate/water/measured/SMP-001#temperature) |
-|                     |                                                                                                                   | `{obs_id}`          | Unique observatory ID                          |                                   |                                           |
-|                     |                                                                                                                   | `{env_package}`     | Environment package                            |                                   |                                           |
-|                     |                                                                                                                   | `{source_mat_id}`   | Unique sample ID                               |                                   |                                           |
-|                     |                                                                                                                   | `{observedProperty}`| Name of the observed property                  | e.g., temperature, pH            |                                           |
-| Batch                | `http://data.emobon.embrc.eu/shipment/batch/{batchID}`                                                          |                    |                                               |                                   | [batch BATCH-001](http://data.emobon.embrc.eu/shipment/batch/BATCH-001) |
-|                     |                                                                                                                   | `{batchID}`         | Unique batch identifier                         |                                   |                                           |
-| Sequence Run         | `http://data.emobon.embrc.eu/shipment/batch/{batchID}#SequenceAnalysis`                                        |                    |                                               |                                   | [sequence run](http://data.emobon.embrc.eu/shipment/batch/BATCH-001#SequenceAnalysis) |
-|                     |                                                                                                                   | `{batchID}`         | Batch ID associated with the sequence run      |                                   |                                           |
-
-
----
-# RO-Profiles
-{: .no_toc_section }
-
-RO-profiles encapsulate Research Object (RO) profiles that describe conformity to a fixed set of expectations for data structures. They ensure consistency in the way research data is formatted and provide practical assets such as templates, SHACL files, documentation, and other reference materials. Used as metadata descriptors for crates that comply with specific profile expectations, RO-profiles help standardize research data management. More information is available at: [Ro Crate profiles](https://www.researchobject.org/ro-crate/specification/1.2-DRAFT/profiles.html).
-- **Creation & Management**:  
-`https://github.com/emo-bon/{name}-profile`
-- **URI Format**:  
-`https://data.embon.embrc.eu/{name}-profile/{version}`
-  - `{name}`:  observatory \| sequencing \| analysis-results 
-  - `{version}`: `latest` or a specific version vM.m.p. (e.g., `v1.0.0`)
-
----
-# RO-Crates
-{: .no_toc_section }
-
-Crates are structured data packages that encapsulate various types of research data. They serve as containers for datasets, metadata, and other related information, ensuring consistency, traceability, and compliance with RO-profiles. Within the EMO-BON ecosystem, we categorize crates into different types, each serving a specific purpose:
-
-## Governance Crate
-{: .no_toc_section }
-- **Concept**:  
-Contains information relating to the governance of EMO BON GitHub activities and actions.
-- **URI Format**:  
-`https://data.emobon.embrc.eu/governance-crate/`
-- **Creation & Management**:  
-`https://github.com/emo-bon/governance-crate/`
-
-## Observatory Crate
-{: .no_toc_section }
-- **Concept**:  
-Holds information about an EMOBON Observatory, its associated sampling events, and the data generated from those events.
-- **Creation & Management**:  
-`https://github.com/emo-bon/observatory-{obsid}-crate/`
-- **URI Format**:  
-`https://data.emobon.embrc.eu/observatory-{obsid}-crate`
-  - `{obsid}` = ...
-
-
-## Analysis-Results Crate
-{: .no_toc_section }
-- **Concept**:  
-Holds information and data resulting from MetaGOFlow data analysis processes.
-- **Creation & Management**:  
-`https://github.com/emo-bon/analysis-results-{cluster}-crate/`
-- **URI format**:  
-`https://data.emobon.embrc.eu/analysis-results-{cluster}-crate/`
-  - `{cluster}` = ...
-
-## Sequencing Crate
-{: .no_toc_section }
-- **Concept**:  
-Holds information and data resulting from sequencing runs.
-- **Creation & Management**:  
-`https://github.com/emo-bon/sequencing-crate`
-- **URI format**:  
-`https://data.emobon.embrc.eu/sequencing-crate`
-
-
----
-
-# Data Entities
-{: .no_toc_section }
-
-The RDF-based triple files within each crate collectively form the EMO-BON data graph, with entities as its core components. Each entity has a unique URI and is defined by properties and connections to other entities. This ensures structured data, consistent referencing within the knowledge graph, and allows for efficient data retrieval and analysis within the EMO-BON ecosystem. Below is an overview of the primary entities, their roles, and their respective URI formats.
-
-## Observatory
-{: .no_toc_section }
-- **Concept**:  
-An EMO BON organisational unit linked to the collection of a specific sample type (e.g. water column, soft sediment) from a fixed, pre-determined location.
-- **URI Format**:  
-`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`
-  - `{obsid}`: ...
-  - `{env_package}`: ...
-
-## Sampling Event
-{: .no_toc_section }
-- **Concept**:  
-A sampling action performed at a particular observatory at a specific time, resulting in the collection of one or more samples.
-- **URI Format**:  
-`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{sampling_event}`
-  - `{obsid}`: ...
-  - `{env_package}`: ...
-  - `{sampling_event}`: ...
-
-## Sample
-{: .no_toc_section }
-- **Concept**:  
-A material sample collected during a sampling event.
-- **URI Format**:  
-`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}`
-  - `{obsid}`: ...
-  - `{env_package}`: ...
-  - `{source_mat_id}`: ...
-
-## Sample Replicate
-{: .no_toc_section }
-- **Concept**:  
-A material sample collected during a sampling event.
-- **URI Format**:  
-`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling/{source_mat_id}`
-  - `{obsid}`: ...
-  - `{env_package}`: ...
-  - `{source_mat_id}`: ...
-
-## Observation
-{: .no_toc_section }
-- **Concept**:  
-A measurement or observations made from a sample.
-- **URI Format**:  
-`http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/measured/{source_mat_id}#{observedProperty}`
-  - `{obsid}`: ...
-  - `{env_package}`: ...
-  - `{source_mat_id}`: ...
-  - `{observedProperty}`: ...
-
-## Batch 
-{: .no_toc_section }
-- **Concept**:  
-...
-- **URI Format**:  
-`http://data.emobon.embrc.eu/shipment/batch/{batchID}`
-  - `{batchID}`: ...
-
-## Sequence Run
-{: .no_toc_section }
-- **Concept**:  
-...
-- **URI Format**:  
-`http://data.emobon.embrc.eu/shipment/batch/{batchID}#SequenceAnalysis`
-  - `{batchID}`:  ...
-
-## Taxon
-{: .no_toc_section }
-- **Concept**:  
-...
-- **URI Format**:  
-tbd  
-
-## FunctionalAnnotation
-{: .no_toc_section }
-- **Concept**:  
-...
-- **URI Format**:  
-tbd  
-
 
 ## Ontologies 
 
