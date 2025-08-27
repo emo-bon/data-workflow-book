@@ -98,6 +98,8 @@ Below are detailed tables for each entity type, including parameters, descriptio
 ### RO-Profiles
 {: .no_toc_section }
 
+URI pattern: `{{base}}/{name}-profile/{version}`
+
 | Parameter    | Description                  | Allowed Values                               | Example URI |
 |--------------|------------------------------|----------------------------------------------|---------|
 | `{name}`     | Name of the profile          | observatory, sequencing, analysis-results    | observatory |
@@ -119,7 +121,7 @@ Example: [https://data.emobon.embrc.eu/governance-crate/](https://data.emobon.em
 ### Observatory Crate
 {: .no_toc_section }
 
-URI pattern: `https://data.emobon.embrc.eu/observatory-{obsid}-crate`
+URI pattern: `{{base}}/observatory-{obsid}-crate`
 
 | Parameter  | Description              | Allowed Values | Example(s) |
 |------------|--------------------------|----------------|---------|
@@ -131,7 +133,7 @@ Example: [https://data.emobon.embrc.eu/observatory-hcmr-1-crate](https://data.em
 ### Analysis-Results Crate
 {: .no_toc_section }
 
-URI pattern: `https://data.emobon.embrc.eu/analysis-results-{cluster}-crate`
+URI pattern: `{{base}}/analysis-results-{cluster}-crate`
 
 | Parameter   | Description                   | Allowed Values | Example |
 |-------------|-------------------------------|----------------|---------|
@@ -149,7 +151,7 @@ Example: [*to be included*]()
 ### Observatory
 {: .no_toc_section }
 
-URI pattern: `http(s)://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`
+URI pattern: `{{base}}/observatory-{obs_id}-crate/{env_package}/observatory/{obs_id}`
 
 | Parameter      | Description              | Allowed Values          | Example |
 |----------------|--------------------------|-------------------------|---------|
@@ -164,7 +166,7 @@ Example: [http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/observatory
 ### Sampling Event
 {: .no_toc_section }
 
-URI pattern: `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sampling-event/{sampling_event}`
+URI pattern: `{{base}}/observatory-{obs_id}-crate/{env_package}/sampling-event/{sampling_event}`
 
 | Parameter         | Description                  | Allowed Values | Example |
 |-------------------|------------------------------|----------------|---------|
@@ -180,7 +182,7 @@ Example URI: [http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/samplin
 ### Sample
 {: .no_toc_section }
 
-URI pattern: `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/sample/{source_mat_id}`
+URI pattern: `{{base}}/observatory-{obs_id}-crate/{env_package}/sample/{source_mat_id}`
 
 | Parameter        | Description              | Allowed Values | Example |
 |------------------|--------------------------|----------------|---------|
@@ -197,7 +199,7 @@ Example: [http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/sample/EMOB
 ### Observation
 {: .no_toc_section }
 
-URI pattern: `http://data.emobon.embrc.eu/observatory-{obs_id}-crate/{env_package}/observation/{source_mat_id}#{observedProperty}`
+URI pattern: `{{base}}/observatory-{obs_id}-crate/{env_package}/observation/{source_mat_id}#{observedProperty}`
 
 | Parameter           | Description                  | Allowed Values      | Example |
 |---------------------|------------------------------|---------------------|---------|
@@ -212,7 +214,7 @@ Example: [http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/observation
 ### Taxon summary
 {: .no_toc_section }
 
-URI pattern: `http://data.emobon.embrc.eu/analysis-results-{cluster}-crate/taxonomy-summary#{OTU-ID}`
+URI pattern: `{{base}}/analysis-results-{cluster}-crate/taxonomy-summary#{OTU-ID}`
 
 | Parameter     | Description                     | Allowed Values | Example |
 |---------------|---------------------------------|----------------|---------|
@@ -225,7 +227,7 @@ Example: `to include`
 ### Functional Annotation
 {: .no_toc_section }
 
-URI-pattern: `http://data.emobon.embrc.eu/analysis-results-{cluster}-cratefunctional-annotation#{rowID}`
+URI-pattern: `{{base}}/analysis-results-{cluster}-cratefunctional-annotation#{rowID}`
 
 | Parameter      | Description                     | Allowed Values | Example |
 |----------------|---------------------------------|----------------|---------|
@@ -260,11 +262,51 @@ Example: [to include]()
 - S3 objects stored via dvc :: `https://TBD` 
 - other?
 
+# Entity relations
+
+<style>
+table {
+  width: 100%;
+  margin: 3px 0;
+}
+</style>
+
+![Entity relations](../../assets/entity-relations-diagram.png "diagram of entity relations")
+
+**Sampling-event Entity**
+| ?s                  | ?p                  | ?o                  |
+|-----|------------------------------|----------------|
+|`{{base}}/observatory-{obsid}-crate/{env-package}/sampling-event/{sampling_event}`| sampling:linkedToObservatory | `{{base}}/observatory-{obsid}-crate/{env_package}/observatory/{obsid}` |
+|| sosa:hasResult | `{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}` |
+
+**Sample Entity**
+| ?s                  | ?p                  | ?o                  |
+|-----|------------------------------|----------------|
+|`{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}`| sosa:isResultOf | `{{base}}/observatory-{obsid}-crate/{env-package}/sampling-event/{sampling_event}` |
+
+
+**Observation Entity**
+| ?s                  | ?p                  | ?o                  |
+|-----|------------------------------|----------------|
+|`{{base}}/observatory-{obsid}-crate/{env_package}/observation/{source_mat_id}#{meas_name}`| sosa:hasFeatureOfInterest | `{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}` |
+
+**Taxonomic annotation Entity**
+| ?s                  | ?p                  | ?o                  |
+|-----|------------------------------|----------------|
+|`{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/{OTU-ID}`| prod:ofSample | `{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}` |
+|| dct:isPartOf | `{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/` |
+
+
+**Functional annotation Entity**
+| ?s                  | ?p                  | ?o                  |
+|-----|------------------------------|----------------|
+|`{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/{rowID}`| prod:ofSample | `{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}` |
+|| dct:isPartOf | `{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/` |
 
 
 ## Ontologies
 
-The EMO-BON project maintains a collection of ontologies and vocabularies published under  
+A collection of ontologies and vocabularies is maintained and published under  
 [`https://data.emobon.embrc.eu/ns/`](https://data.emobon.embrc.eu/ns/).  
 These resources define terms that are specific to the EMO-BON domain and provide a shared language for describing entities, metadata, and results across the ecosystem.  
 
