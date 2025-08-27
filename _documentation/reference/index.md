@@ -276,30 +276,30 @@ table {
 ### Sampling Event Entity
 | ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-| `{{base}}/observatory-{obsid}-crate/{env_package}/sampling-event/{sampling_event}` | sampling:linkedToObservatory | `{{base}}/observatory-{obsid}-crate/{env_package}/observatory/{obsid}` |
-| `{{base}}/observatory-{obsid}-crate/{env_package}/sampling-event/{sampling_event}` | sosa:hasResult | `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` |
+| /observatory-{obsid}-crate/{env_package}/sampling-event/{sampling_event} | sampling:linkedToObservatory | /observatory-{obsid}-crate/{env_package}/observatory/{obsid} |
+| /observatory-{obsid}-crate/{env_package}/sampling-event/{sampling_event} | sosa:hasResult | /observatory-{obsid}-crate/{env_package}/sample/{source_mat_id} |
 
 ### Sample Entity
 | ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-| `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` | sosa:isResultOf | `{{base}}/observatory-{obsid}-crate/{env_package}/sampling-event/{sampling_event}` |
+| /observatory-{obsid}-crate/{env_package}/sample/{source_mat_id} | sosa:isResultOf | /observatory-{obsid}-crate/{env_package}/sampling-event/{sampling_event} |
 
 ### Observation Entity
 | ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-| `{{base}}/observatory-{obsid}-crate/{env_package}/observation/{source_mat_id}#{meas_name}` | sosa:hasFeatureOfInterest | `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` |
+| /observatory-{obsid}-crate/{env_package}/observation/{source_mat_id}#{meas_name} | sosa:hasFeatureOfInterest | /observatory-{obsid}-crate/{env_package}/sample/{source_mat_id} |
 
 ### Taxonomic Annotation Entity
 | ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-| `{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/{OTU-ID}` | prod:ofSample | `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` |
-| `{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/{OTU-ID}` | dct:isPartOf | `{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/` |
+| /analysis-results-{clusterID}-cluster/taxonomy-summary/{OTU-ID} | prod:ofSample | /observatory-{obsid}-crate/{env_package}/sample/{source_mat_id} |
+| /analysis-results-{clusterID}-cluster/taxonomy-summary/{OTU-ID} | dct:isPartOf | /analysis-results-{clusterID}-cluster/taxonomy-summary/ |
 
 ### Functional Annotation Entity
 | ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-| `{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/{rowID}` | prod:ofSample | `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` |
-| `{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/{rowID}` | dct:isPartOf | `{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/` |
+| /analysis-results-{clusterID}-cluster/functional-annotation/{rowID} | prod:ofSample | /observatory-{obsid}-crate/{env_package}/sample/{source_mat_id} |
+| /analysis-results-{clusterID}-cluster/functional-annotation/{rowID} | dct:isPartOf | /analysis-results-{clusterID}-cluster/functional-annotation/ |
 
 
 
