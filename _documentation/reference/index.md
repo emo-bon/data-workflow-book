@@ -262,7 +262,7 @@ Example: [to include]()
 - S3 objects stored via dvc :: `https://TBD` 
 - other?
 
-# Entity relations
+## Relationships URI Entities
 
 <style>
 table {
@@ -273,35 +273,34 @@ table {
 
 ![Entity relations](../../assets/entity-relations-diagram.png "diagram of entity relations")
 
-**Sampling-event Entity**
-| ?s                  | ?p                  | ?o                  |
+### Sampling Event Entity
+| ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-|`{{base}}/observatory-{obsid}-crate/{env-package}/sampling-event/{sampling_event}`| sampling:linkedToObservatory | `{{base}}/observatory-{obsid}-crate/{env_package}/observatory/{obsid}` |
-|| sosa:hasResult | `{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}` |
+| `{{base}}/observatory-{obsid}-crate/{env_package}/sampling-event/{sampling_event}` | sampling:linkedToObservatory | `{{base}}/observatory-{obsid}-crate/{env_package}/observatory/{obsid}` |
+| `{{base}}/observatory-{obsid}-crate/{env_package}/sampling-event/{sampling_event}` | sosa:hasResult | `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` |
 
-**Sample Entity**
-| ?s                  | ?p                  | ?o                  |
+### Sample Entity
+| ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-|`{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}`| sosa:isResultOf | `{{base}}/observatory-{obsid}-crate/{env-package}/sampling-event/{sampling_event}` |
+| `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` | sosa:isResultOf | `{{base}}/observatory-{obsid}-crate/{env_package}/sampling-event/{sampling_event}` |
 
-
-**Observation Entity**
-| ?s                  | ?p                  | ?o                  |
+### Observation Entity
+| ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-|`{{base}}/observatory-{obsid}-crate/{env_package}/observation/{source_mat_id}#{meas_name}`| sosa:hasFeatureOfInterest | `{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}` |
+| `{{base}}/observatory-{obsid}-crate/{env_package}/observation/{source_mat_id}#{meas_name}` | sosa:hasFeatureOfInterest | `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` |
 
-**Taxonomic annotation Entity**
-| ?s                  | ?p                  | ?o                  |
+### Taxonomic Annotation Entity
+| ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-|`{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/{OTU-ID}`| prod:ofSample | `{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}` |
-|| dct:isPartOf | `{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/` |
+| `{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/{OTU-ID}` | prod:ofSample | `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` |
+| `{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/{OTU-ID}` | dct:isPartOf | `{{base}}/analysis-results-{clusterID}-cluster/taxonomy-summary/` |
 
-
-**Functional annotation Entity**
-| ?s                  | ?p                  | ?o                  |
+### Functional Annotation Entity
+| ?s | ?p | ?o |
 |-----|------------------------------|----------------|
-|`{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/{rowID}`| prod:ofSample | `{{base}}/observatory-{obsid}-crate/{env-package}/sample/{source_mat_id}` |
-|| dct:isPartOf | `{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/` |
+| `{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/{rowID}` | prod:ofSample | `{{base}}/observatory-{obsid}-crate/{env_package}/sample/{source_mat_id}` |
+| `{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/{rowID}` | dct:isPartOf | `{{base}}/analysis-results-{clusterID}-cluster/functional-annotation/` |
+
 
 
 ## Ontologies
