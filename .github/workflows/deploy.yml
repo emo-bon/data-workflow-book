@@ -2,10 +2,10 @@ name: deploy-book
 
 # Run this when the main branch changes
 on:
+  workflow_dispatch:
   push:
     branches:
     - main
-  workflow_dispatch:
 env:
   # `BASE_URL` determines the website is served from, including CSS & JS assets
   BASE_URL: /data-workflow-book
