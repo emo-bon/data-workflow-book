@@ -1,0 +1,59 @@
+# See book at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: emo-bon-data-workflow-book
+  title: EMO-BON Data Workflow Handbook
+  description: A comprehensive reference to our EMO-BON data workflow, covering naming conventions, workflow descriptions, URI namespace documentation, glossary terms, and DevOps guidelines.
+  github: https://github.com/emo-bon/data-workflow-book
+  keywords: ["EMO-BON", "data workflow", "RO-Crate", "metadata"]
+  open_access: true
+  license:
+    content:
+      id: CC-BY-4.0
+  toc:
+    - file: index.md
+    - title: Introduction
+      children:
+          - file: 01-introduction/what-this-book-aims-to-clarify.md
+          - file: 01-introduction/graphic-navigation-guide.md
+    - title: Data Management Flow
+      children:
+          - file: 02-data-management-flow/infographic-on-data-flow.md
+          - file: 02-data-management-flow/data-ingestion-processes.md
+          - file: 02-data-management-flow/qc-processes.md
+          - file: 02-data-management-flow/kg-building.md
+          - file: 02-data-management-flow/udal-queries.md
+    - title: Data Sources
+      children:
+          - file: 03-data-sources/which-data-sources.md
+          - file: 03-data-sources/where-are-they-available.md
+    - title: Data Products
+      children:
+          - file: 04-data-products/crates.md
+    - title: Data Graph
+      children:
+          - file: 05-data-graph/entities.md
+          - file: 05-data-graph/uri-namespace.md
+    - title: Conformance
+      children:
+          - file: 06-conformance/ro-profiles.md
+          - file: 06-conformance/ontologies.md
+    - title: Technical Details
+      children:
+          - file: 07-technical-details/software-components.md
+          - file: 07-technical-details/publication-details.md
+          - file: 07-technical-details/process-orchestration.md
+          - file: 07-technical-details/github-deployments.md
+          - file: 07-technical-details/large-file-support.md
+          - file: 07-technical-details/external-storage.md
+    - title: Addendum
+      children:
+          - file: 08-addendum/best-practices.md
+          - file: 08-addendum/conventions.md
+          - file: 08-addendum/glossary.md
+          - file: 08-addendum/status-overview.md
+    - title: Data Paper
+      children:
+          - file: 09-data-paper/index.md
+site:
+  template: book-theme
