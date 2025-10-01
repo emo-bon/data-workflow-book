@@ -1,0 +1,6 @@
+# MyST Markdown dependencies
+mystmd>=1.0.0
+jupyter-book>=0.15.0
+
+# Required for building
+ghp-import
