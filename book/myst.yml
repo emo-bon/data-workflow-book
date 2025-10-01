@@ -57,5 +57,3 @@ project:
           - file: 09-data-paper/index.md
 site:
   template: book-theme
-  options:
-    logo: https://data.emobon.embrc.eu/assets/gitbook/images/apple-touch-icon-precomposed-152.png
