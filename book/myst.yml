@@ -57,6 +57,9 @@ project:
           - file: 09-data-paper/index.md
 site:
   template: book-theme
+  nav:
+    - title: emobon-homepage
+      url: https://data.emobon.embrc.eu
   logo: https://data.emobon.embrc.eu/img/emobon_logo.png
   logoLink: https://data.emobon.embrc.eu
   options:
