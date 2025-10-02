@@ -14,7 +14,7 @@ project:
     - file: index.md
     - title: Introduction
       children:
-          - file: 01-introduction/what-this-book-aims-to-clarify.md
+          - file: 01-introduction/about-this-handbook.md
           - file: 01-introduction/graphic-navigation-guide.md
     - title: Data Management Flow
       children:
@@ -25,8 +25,8 @@ project:
           - file: 02-data-management-flow/udal-queries.md
     - title: Data Sources
       children:
-          - file: 03-data-sources/which-data-sources.md
-          - file: 03-data-sources/where-are-they-available.md
+          - file: 03-data-sources/data-sources.md
+          - file: 03-data-sources/other-data-sources.md
     - title: Data Products
       children:
           - file: 04-data-products/crates.md

@@ -2,14 +2,7 @@
 title: URI Namespace
 ---
 
-This section provides a comprehensive overview of the URI namespaces used within EMO-BON.
-
-## Base URI
-
-All EMO-BON entities use the base URI:
-```
-https://data.emobon.embrc.eu
-```
+This section provides a comprehensive overview of the URI namespaces used within the EMO-BON ecosystem.
 
 ## URI Design Principles
 
@@ -19,9 +12,12 @@ EMO-BON URI patterns are designed for:
 - **Interoperability**: Compatible with linked data standards
 - **Publication**: Suitable for static content hosting without requiring a triple store
 
+
 ## Overview - URI Path Patterns
 
-Each URI begins with the base and is extended with a path segment specific to the entity type:
+Base URI: ```https://data.emobon.embrc.eu```
+
+Each URI is further extended with a path specific to the entity type:
 
 | Entity type | `/repository` | `/path-to/file.extension` | `#fragment-identifier` | 
 |----------------------|-----------------------------------|--------------------------|-----------------------------|
@@ -41,10 +37,10 @@ Each URI begins with the base and is extended with a path segment specific to th
 | Taxon summary | `/analysis-results-{cluster}-crate` | `/taxonomy-summary` | `#{OTU-ID}` |
 | Functional annotation | `/analysis-results-{cluster}-crate` | `/functional-annotation` | `#{rowID}` |
 |  |  |  |  |
-| batch | `/sequencing-crate` | `/shipment/batch/{batchID}` |  |
-| sequence-run | `/sequencing-crate` | `/shipment/batch/{batchID}` | `#SequenceAnalysis` |
+| *batch* | *`/sequencing-crate`* | *`/shipment/batch/{batchID}`* |  |
+| *sequence-run* | *`/sequencing-crate`* | *`/shipment/batch/{batchID}`* | *`#SequenceAnalysis`* |
 
-## Detailed URI Path Specifications
+## Detailed Specifications - URI Path Patterns 
 
 ### RO-Profiles
 
@@ -112,10 +108,6 @@ URI pattern: `{base}/observatory-{obs_id}-crate/{env_package}/observatory/{obs_i
 
 **Example**: http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/observatory/HCMR-1
 
-:::{note}
-Currently not directly dereferenceable - see [all-triples.ttl](https://raw.githubusercontent.com/emo-bon/observatory-hcmr-1-crate/refs/heads/main/all-triples.ttl)
-:::
-
 ### Sampling Event
 
 URI pattern: `{base}/observatory-{obs_id}-crate/{env_package}/sampling-event/{sampling_event}`
@@ -153,7 +145,7 @@ URI pattern: `{base}/observatory-{obs_id}-crate/{env_package}/observation/{sourc
 
 **Example**: http://data.emobon.embrc.eu/observatory-hcmr-1-crate/water/observation/EMOBON_HCMR-1_Wa_1#chlorophyll
 
-### Taxon Summary
+### Taxononmy Annotation
 
 URI pattern: `{base}/analysis-results-{cluster}-crate/taxonomy-summary#{OTU-ID}`
 
@@ -161,6 +153,8 @@ URI pattern: `{base}/analysis-results-{cluster}-crate/taxonomy-summary#{OTU-ID}`
 |---------------|---------------------------------|----------------|
 | `{cluster}`   | Unique analysis cluster ID      | free-text IDs  |
 | `{OTU-ID}`    | Unique OTU identifier           | free-text IDs  |
+
+**Example**:  
 
 ### Functional Annotation
 
@@ -170,6 +164,8 @@ URI pattern: `{base}/analysis-results-{cluster}-crate/functional-annotation#{row
 |----------------|---------------------------------|----------------|
 | `{cluster}`    | Unique analysis cluster ID      | free-text IDs  |
 | `{rowID}`      | Row ID for functional annotation| index IDs      |
+
+**Example**:  
 
 ### Batch
 
@@ -194,20 +190,3 @@ URI pattern: `{base}/sequencing-crate/shipment/batch/{batchID}#SequenceAnalysis`
 :::{note}
 Doesn't exist yet
 :::
-
-## EMO-BON Ontologies
-
-A collection of ontologies and vocabularies is maintained and published under:
-[https://data.emobon.embrc.eu/ns/](https://data.emobon.embrc.eu/ns/)
-
-These resources define terms specific to the EMO-BON domain and provide a shared language for describing entities, metadata, and results.
-
-The collection is organized into thematic namespaces:
-
-- **governance** — terms relevant to EMO-BON governance, processes, and organizational structures
-- **product** — terms used to describe taxonomic and functional outputs from analyses of samples
-- **sampling** — terms for metadata about EMO-BON sampling activities and resulting samples
-- **core** — terms defining metadata related to EMO-BON observatories
-- **sequence** — terms used to describe results from sequence analyses
-
-Each vocabulary provides standard concepts tailored to its context, ensuring consistent, interoperable descriptions throughout the EMO-BON knowledge graph.
