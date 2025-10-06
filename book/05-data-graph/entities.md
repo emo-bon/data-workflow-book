@@ -2,17 +2,11 @@
 title: Entities
 ---
 
-This section describes the key entities in the EMO-BON knowledge graph and their relationships.
 
-## Entity Relationship Diagram
-
-:::{Entity diagram}
-![Entity relationships diagram](../assets/entity-relations-diagram.png)
-:::
+> Entity Relationship Diagram
+> ![Entity relationships diagram](../assets/entity-relations-diagram.png)
 
 ## Core Entities
-
-*Graph objects resulting from the semantic uplifting of the sampling logsheet data*
 
 ### Observatory
 
@@ -65,8 +59,6 @@ A measurement or observation made on a sample.
   - Observation → `sosa:hasFeatureOfInterest` → Sample
 
 ## Analysis Result Entities
-
-*Graph entities resulting from the semantic uplifting of the analysis results data*
 
 ### Taxonomy Annotation
 
