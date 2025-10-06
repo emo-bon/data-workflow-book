@@ -2,92 +2,79 @@
 title: Crates (RO-Crates)
 ---
 
-This section describes the various RO-Crate products maintained in the EMO-BON project.
+## EMO-BON Crates
+EMO-BON Crates are RO-crates that contain EMO-BON associated data, like logsheets from observatories, MetaGOflow runs, sequencing metadata, etc.  
 
-## What are RO-Crates?
 
-An RO-Crate is a collection of data files, metadata, and contextual information that organizes research data in a structured format, enabling easy sharing, reuse, and understanding in both machine-readable and human-readable forms.
+> **What is an RO-Crate?**  
+> An RO-Crate is a structured collection of data files, metadata, and contextual information designed to make research data easy to share, reuse, and understand - both by humans and machines.  
 
-EMO-BON RO-Crates contain data associated with: logsheets from observatories, MetaGOflow runs, and sequencing metadata. Usually, our RO-Crates are single repositories, but for some, one repository contains multiple RO-Crates. An RO-Crate is manifest via a `ro-crate-metadata.json` file.
 
-## Types of EMO-BON Crates
 
-### Observatory Crates
+> **What is an `ro-crate-metadata.json` file?**  
+> The `ro-crate-metadata.json` file is the central metadata file in an RO-Crate. It:
+> - Describes the contents of the crate
+> - Defines relationships between files and their associated metadata
+> - Provides traceability, context, and purpose
+> - Adheres to the RO-Crate specification
+> - Is structured as JSON-LD, enabling integration with knowledge graphs
 
-Repository pattern: `observatory-{observatory_id}-crate`
 
-Example: https://github.com/emo-bon/observatory-bpns-crate
+### Types of EMO-BON Crates
+In EMO-BON context, there are various types of emo-bon ro-crates identifiable. Usually, an EMO-BON Crate corresponds to a single (GitHub) repository, but in some cases, a (GitHub) repository can contain multiple EMO-BON Crates.  
 
-**Contents**:
-- Logsheet data (CSV files from Google Sheets)
-- Sample and sampling event metadata
-- Environmental measurements
-- Links to related sequences
-- RDF triples describing the data
+- ### Governance Crate
+  - **Purpose**: Central coordination and configuration for the EMO-BON data system.
+  - **Contents**:
+    - List of observatories
+    - Logsheet registry (logsheets.csv)
+    - Overall project configuration
+    - Cross-cutting metadata
+  - **URI**: https://data.emobon.embrc.eu/governance-data 
+  (Maintained at: https://github.com/emo-bon/governance-data)
 
-**Purpose**: Store and publish data collected by individual observatories.
+  > 
 
-### Governance Crate
+- ### Observatory Crate
+  - **Purpose**: Store and publish data collected by individual observatories.
 
-Repository: `governance-data`
+  - **Contents**:
+    - Logsheet data (CSV files from Google Sheets)
+    - Sample and sampling event metadata
+    - Environmental measurements
+    - Links to related sequences
+    - RDF triples describing the data
 
-**Contents**:
-- List of observatories
-- Logsheet registry (logsheets.csv)
-- Overall project configuration
-- Cross-cutting metadata
+  - **URI pattern**: `{{base}}/observatory-{observatory_id}-crate`  
+  Example: https://data.emobon.embrc.eu/observatory-bpns-crate/  
+  (Maintained at: https://github.com/emo-bon/observatory-bpns-crate)
 
-**Purpose**: Central coordination and configuration for the EMO-BON data system.
 
-### Analysis Results Crates
+- ### Analysis Results Crate
+  - **Purpose**: Store and publish results from bioinformatics analysis of sequences.
+  - **Contents**:
+    - MetaGOflow analysis outputs
+    - Processed sequences (OTUs/ASVs)
+    - Taxonomic summaries
+    - Functional annotations
+    - Large files managed via DVC and S3
+  - **URI pattern**: `{{base}}/analysis-results-{cluster}-crate/{materialSampleId}`  
+  Examples: 
+    - overview of batch: 
+    https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/  
+    (Maintained at https://github.com/emo-bon/analysis-results-cluster-01-crate)
+    - analysis results of a sample:
+    https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/EMOBON_NRMCB_Wa_24-ro-crate/  
+  (Maintained at: https://github.com/emo-bon/analysis-results-cluster-01-crate/EMOBON_NRMCB_Wa_24-ro-crate/)  
 
-Repository pattern: `analysis-results-{cluster}-crate`
 
-Example: https://github.com/emo-bon/analysis-results-cluster-01-crate
-
-**Contents**:
-- MetaGOflow analysis outputs
-- Processed sequences (OTUs/ASVs)
-- Taxonomic summaries
-- Functional annotations
-- Large files managed via DVC and S3
-
-**Purpose**: Store and publish results from bioinformatics analysis of sequences.
-
-### Sequencing Crate
-
-Repository: `sequencing-crate`
-
-**Contents**:
-- Sequencing metadata
-- Batch information
-- Links to sequences in ENA
-- Sequence run details
-
-**Purpose**: Track sequencing operations and link samples to their sequences.
-
-## RO-Crate Metadata
-
-Each crate contains a `ro-crate-metadata.json` file that:
-- Describes the contents of the crate
-- Maps relationships between files and their metadata
-- Ensures traceability, context, and purpose
-- Follows the RO-Crate specification
-- Can be consumed as JSON-LD for knowledge graph integration
-
-## RO-Crate Profiles
-
-EMO-BON defines specific profiles that describe the expected structure and content of different crate types:
-
-- **Observatory Profile**: https://github.com/emo-bon/observatory-profile
-- **Analysis Results Profile**: (in development)
-- **Sequencing Profile**: (planned)
-
-Profiles are themselves RO-Crates that formally describe the layout/structure of crates that declare conformance to them.
-
-## Accessing Crates
-
-Crates are accessible through:
-- **GitHub Pages**: Human-readable HTML views at https://data.emobon.embrc.eu/
-- **GitHub Repositories**: Raw data and metadata files
-- **SPARQL Endpoint**: Querying the integrated knowledge graph
+- ### *Sequencing Crate - TBD*
+  - **Purpose**: Track sequencing operations and link samples to their sequences.
+  - **Contents**:
+    - Sequencing metadata
+    - Batch information
+    - Links to sequences in ENA
+    - Sequence run details
+  - **URI pattern**: `sequencing-crate`
+  Example: ...
+  (Maintained at: ...)
