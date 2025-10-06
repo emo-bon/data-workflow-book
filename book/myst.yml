@@ -25,7 +25,9 @@ project:
           - file: 02-data-management-flow/udal-queries.md
     - title: Data Sources
       children:
-          - file: 03-data-sources/data-sources.md
+          - file: 03-data-sources/sampling-data.md
+          - file: 03-data-sources/analysis-data.md
+          - file: 03-data-sources/governance-data.md
           - file: 03-data-sources/other-data-sources.md
     - title: Data Products
       children:
