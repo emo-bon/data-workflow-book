@@ -65,7 +65,7 @@ In EMO-BON context, there are various types of emo-bon ro-crates identifiable. U
     (Maintained at https://github.com/emo-bon/analysis-results-cluster-01-crate)
     - analysis results of a sample:
     https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/EMOBON_NRMCB_Wa_24-ro-crate/  
-  (Maintained at: https://github.com/emo-bon/analysis-results-cluster-01-crate/EMOBON_NRMCB_Wa_24-ro-crate/)  
+  (Maintained at: https://github.com/emo-bon/analysis-results-cluster-01-crate)  
 
 
 - ### *Sequencing Crate - TBD*
