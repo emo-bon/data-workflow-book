@@ -2,119 +2,65 @@
 title: Ontologies
 ---
 
-This section describes the ontologies and vocabularies used in the EMO-BON data model.
+# EMO-BON Ontologies
 
-## EMO-BON Ontologies
+The EMO-BON data model is designed with a strong emphasis on interoperability and reuse. To support this, it incorporates terms from established, widely adopted ontologies wherever possible. This approach ensures consistency and enhances the integration of EMO-BON data within broader semantic frameworks.
 
-A collection of ontologies and vocabularies is maintained and published under:
+The following is a preliminary list of ontologies reused within the EMO-BON model:
+
+- [**SOSA (Sensor, Observation, Sample, and Actuator)**](http://www.w3.org/ns/sosa/)
+  Modeling observations, samples, and sampling events.  
+  e.g. `Observation`, `Sample`, `Sampling`, `hasResult`, `isResultOf`, ...
+
+- [**Dublin Core**](http://purl.org/dc/terms/)  
+  General metadata properties.  
+  e.g. `title`, `description`, `creator`, `date`, `isPartOf`, ...
+
+- [**Schema.org**](https://schema.org/)  
+  General-purpose metadata for describing entities.  
+  e.g. `name`, `description`, `url`, `identifier`, ...
+
+- [**PROV-O (Provenance Ontology)**](https://www.w3.org/TR/prov-o/)  
+  Representing provenance metadata.  
+  e.g. `Activity`, `Entity`, ...
+
+- ...
+
+
+Not all concepts relevant to EMO-BON could be adequately represented using existing ontologies. To address these gaps and ensure a complete and coherent data model, EMO-BON defines its own suite of ontologies, available at:
+
 [https://data.emobon.embrc.eu/ns/](https://data.emobon.embrc.eu/ns/)
 
-These resources define terms specific to the EMO-BON domain and provide a shared language for describing entities, metadata, and results across the ecosystem.
+These ontologies are organized into thematic namespaces, each covering a specific aspect of the data lifecycle - from observatory metadata and sampling events to analytical outputs and organizational processes. Together, they provide a structured and interoperable foundation for describing marine biodiversity observations, supporting rich, consistent, and machine-readable data integration across the EMO-BON ecosystem:
 
-## Namespaces
+- [**core ontology**](https://data.emobon.embrc.eu/ns/core/)  
+Defines core metadata related to observatories, sampling events, and samples.
+e.g. `Observatory`, `SampleType`, `hasBiome`, `waterColumnDepth`, ...
 
-The collection is organized into several thematic namespaces:
+- [**core vocabulary**](https://data.emobon.embrc.eu/ns/core/)
+Describes basic environmental concepts used in sampling.  
+e.g. `Hard`, `Soil`, `Water`
 
-### Core
+- [**product ontology**](https://data.emobon.embrc.eu/ns/product/)  
+Terms for describing outputs from taxonomic and functional analyses of samples.   
+e.g. `Product`, `TaxonomicAnnotation`, `FunctionalAnnotation`, `ofSample`, ...
 
-- **Namespace**: https://data.emobon.embrc.eu/ns/core/
-- **Purpose**: Terms defining metadata related to EMO-BON observatories, sampling event and samples.
-- **Example Classes/Properties**:
-  - Observatory
-  - SampleType
-  - hasBiome
-  - waterColumnDepth
-  - ...
+- [**product vocabulary**](https://data.emobon.embrc.eu/ns/product_vocab/)
+Defines terms used within functional and taxonomic annotations.  
+e.g. `GO`, `InterPro`, ...
 
-### Core Vocabulary
+- [**sampling ontology**](https://data.emobon.embrc.eu/ns/sampling/)
+Metadata for describing sampling activities and sample characteristics.  
+e.g. `tidalStage`, `minSamplingDepth`, `longStorage`, `hasSampleSize`, ...
 
-- **Namespace**: https://data.emobon.embrc.eu/ns/core/
-- **Purpose**: Concepts relevant in context of EMO-BON sampling data.
-- **Example Classes/Properties**:
-  - Hard 
-  - Soil 
-  - Water
-  - ...
+- [**sequence ontology**](https://data.emobon.embrc.eu/ns/sequence/)  
+Describes sequencing-related data and analyses.  
+e.g. `SequencingRun`, `associatedBatch`, ....
 
-### Product
+> ⚠️ *Relevance and usage of this namespace should be confirmed.*
 
-- **Namespace**: https://data.emobon.embrc.eu/ns/product/
-- **Purpose**: Terms used to describe taxonomic and functional outputs from analyses of samples.
-- **Example Classes/Properties**:
-  - Product
-  - TaxonomicAnnotation
-  - FunctionalAnnotation
-  - ofSample
-  - ...
+- [**governance ontology**](https://data.emobon.embrc.eu/ns/governance/)  
+Terms related to governance processes and organizational structures in EMO-BON.
+e.g. `SOP`, ....
 
-### Product vocabulary
-
-- **Namespace**: https://data.emobon.embrc.eu/ns/product_vocab/
-- **Purpose**: Concepts relevant in context of functional and taxonomic annotations.
-- **Example Classes/Properties**:
-  - GO
-  - InterPro
-  - ...
-
-### Sampling
-
-- **Namespace**: https://data.emobon.embrc.eu/ns/sampling/
-- **Purpose**: Terms for metadata about EMO-BON sampling activities and resulting samples.
-- **Example Properties**:
-  - tidalStage
-  - minSamplingDepth
-  - longStorage
-  - hasSampleSize
-  - ...
-
-### Sequence
-
-- **Namespace**: https://data.emobon.embrc.eu/ns/sequence/
-- **Purpose**: Terms used to describe results from sequence analyses.
-- **Example Classes/Properties**:
-  - SequencingRun
-  - associatedBatch
-  - ...
-
-! to double check its relevance / use 
-
-### Governance
-
-- **Namespace**: https://data.emobon.embrc.eu/ns/governance/
-- **Purpose**: Terms relevant to EMO-BON governance, processes, and organizational structures.
-- **Example Classes/Properties**:
-  - SOP
-  - ...
-
-! to double check its relevance / use 
-
-
-## External Ontologies
-
-EMO-BON data model also uses terms from established ontologies:
-
-- ### SOSA (Sensor, Observation, Sample, and Actuator)
-
-  - Namespace: http://www.w3.org/ns/sosa/
-  - Modeling observations, samples, and sampling events
-  - Key Terms: `Observation`, `Sample`, `Sampling`, `hasResult`, `isResultOf`
-
-- ### Dublin Core
-
-  - Namespace: http://purl.org/dc/terms/
-  - General metadata properties
-  - Key Terms: `title`, `description`, `creator`, `date`, `isPartOf`
-
-- ### Schema.org
-
-  - Namespace: https://schema.org/
-  - General metadata properties
-  - Key Terms: `name`, `description`, `url`, `identifier`
-
-- ### PROV-O
-
-  - Namespace: https://www.w3.org/TR/prov-o/
-  - Provenance metadata 
-  - Key Terms: `Activity`, `Entity`
-
-
+> ⚠️ *Relevance and usage of this namespace should be confirmed.*
