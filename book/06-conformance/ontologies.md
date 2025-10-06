@@ -8,7 +8,7 @@ The EMO-BON data model is designed with a strong emphasis on interoperability an
 
 The following is a preliminary list of ontologies reused within the EMO-BON model:
 
-- [**SOSA (Sensor, Observation, Sample, and Actuator)**](http://www.w3.org/ns/sosa/)
+- [**SOSA (Sensor, Observation, Sample, and Actuator)**](http://www.w3.org/ns/sosa/)  
   Modeling observations, samples, and sampling events.  
   e.g. `Observation`, `Sample`, `Sampling`, `hasResult`, `isResultOf`, ...
 
@@ -37,7 +37,7 @@ These ontologies are organized into thematic namespaces, each covering a specifi
 Defines core metadata related to observatories, sampling events, and samples.
 e.g. `Observatory`, `SampleType`, `hasBiome`, `waterColumnDepth`, ...
 
-- [**core vocabulary**](https://data.emobon.embrc.eu/ns/core/)
+- [**core vocabulary**](https://data.emobon.embrc.eu/ns/core/)  
 Describes basic environmental concepts used in sampling.  
 e.g. `Hard`, `Soil`, `Water`
 
@@ -45,11 +45,11 @@ e.g. `Hard`, `Soil`, `Water`
 Terms for describing outputs from taxonomic and functional analyses of samples.   
 e.g. `Product`, `TaxonomicAnnotation`, `FunctionalAnnotation`, `ofSample`, ...
 
-- [**product vocabulary**](https://data.emobon.embrc.eu/ns/product_vocab/)
+- [**product vocabulary**](https://data.emobon.embrc.eu/ns/product_vocab/)  
 Defines terms used within functional and taxonomic annotations.  
 e.g. `GO`, `InterPro`, ...
 
-- [**sampling ontology**](https://data.emobon.embrc.eu/ns/sampling/)
+- [**sampling ontology**](https://data.emobon.embrc.eu/ns/sampling/)  
 Metadata for describing sampling activities and sample characteristics.  
 e.g. `tidalStage`, `minSamplingDepth`, `longStorage`, `hasSampleSize`, ...
 
