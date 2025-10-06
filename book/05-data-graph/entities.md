@@ -63,7 +63,7 @@ Example: http://data.emobon.embrc.eu/observatory-bpns-crate/sediment/observation
 Collection of taxonomy annotations
 
 - **URI Pattern**:  
-`{{base}}/analysis-results-{cluster}-crate/taxonomy-summary`  
+`{{base}}/analysis-results-{cluster}-crate/{source_mat_id}-ro-crate/taxonomy-summary-{geneticMarker}`  
 Example:  
 - [https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/EMOBON_AAOT_Wa_42-ro-crate/taxonomy-summary-LSU](https://s3.mesocentre.uca.fr/mgf-data-products/files/md5/f5/c7a71924e1cfb10410331f27636b52)
 - [https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/EMOBON_AAOT_Wa_42-ro-crate/taxonomy-summary-SSU](https://s3.mesocentre.uca.fr/mgf-data-products/files/md5/d3/470a9073b9810baff0e1d5a9f75418) 
@@ -80,7 +80,7 @@ Taxonomic annotation results from sequence analysis.
   - Taxonomic annotation → `prod:ofSample` → Sample
   - Taxonomic annotation → `dct:isPartOf` → Taxonomy Summary collection
 - **URI Pattern**:  
-`{{base}}/analysis-results-{cluster}-crate/taxonomy-summary#{OTU-ID}`  
+`{{base}}/analysis-results-{cluster}-crate/{source_mat_id}-ro-crate/taxonomy-summary-{geneticMarker}#{OTU-ID}`  
 Example: 
 - [https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/EMOBON_AAOT_Wa_42-ro-crate/taxonomy-summary-LSU#2157](https://s3.mesocentre.uca.fr/mgf-data-products/files/md5/f5/c7a71924e1cfb10410331f27636b52)
 - [https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/EMOBON_AAOT_Wa_42-ro-crate/taxonomy-summary-SSU#2157](https://s3.mesocentre.uca.fr/mgf-data-products/files/md5/d3/470a9073b9810baff0e1d5a9f75418)
@@ -93,7 +93,7 @@ Example:
 Collection of functional annotations
 
 - **URI Pattern**:  
-`/analysis-results-{cluster}-crate/functional-annotation`  
+`/analysis-results-{cluster}-crate/{source_mat_id}-ro-crate/functional-annotation`  
 Example: 
 - [https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/EMOBON_AAOT_Wa_42-ro-crate/functional-annotation](https://s3.mesocentre.uca.fr/mgf-data-products/files/md5/9f/0b9bb0f1f867f954f27cc05900879c) 
 
@@ -110,7 +110,7 @@ Functional annotation results from sequence analysis.
   - Functional annotation → `prod:ofSample` → Sample
   - Functional annotation → `dct:isPartOf` → Functional Annotation collection
 - **URI Pattern**:  
-`{{base}}/analysis-results-{cluster}-crate/functional-annotation#{rowID}`  
+`{{base}}/analysis-results-{cluster}-crate/{source_mat_id}-ro-crate/functional-annotation#{rowID}`  
 Example: 
 - [https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/EMOBON_AAOT_Wa_42-ro-crate/functional-annotation#GO:0055085](https://s3.mesocentre.uca.fr/mgf-data-products/files/md5/9f/0b9bb0f1f867f954f27cc05900879c)
 
