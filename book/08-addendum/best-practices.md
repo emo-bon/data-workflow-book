@@ -27,7 +27,7 @@ This page outlines the best-practices for metadata and data, used in the EMO-BON
 2. ## Identifiers
 
 - ### Observatory IDs
-  Format: lowercase with hyphens
+  Format: lowercase with hyphens  
   **Examples**:
     - `bpns`
     - `hcmr-1`
