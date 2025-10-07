@@ -59,6 +59,19 @@ project:
           - file: 09-data-paper/index.md
 site:
   template: book-theme
+  actions:
+    - title: ABOUT
+      url: "https://data.emobon.embrc.eu/#about"
+    - title: DATA
+      url: "https://data.emobon.embrc.eu/#data"
+    - title: PUBLICATIONS
+      url: "https://data.emobon.embrc.eu/#publications"
+    - title: RESULTS
+      url: "https://data.emobon.embrc.eu/#results"
+    - title: DOCS
+      url: "https://data.emobon.embrc.eu/#docs"
+    - title: CONTACT
+      url: "https://data.emobon.embrc.eu/#contact"
   nav:
     - title: ABOUT
       url: "https://data.emobon.embrc.eu/#about"
