@@ -72,19 +72,6 @@ site:
       url: "https://data.emobon.embrc.eu/#docs"
     - title: CONTACT
       url: "https://data.emobon.embrc.eu/#contact"
-  nav:
-    - title: ABOUT
-      url: "https://data.emobon.embrc.eu/#about"
-    - title: DATA
-      url: "https://data.emobon.embrc.eu/#data"
-    - title: PUBLICATIONS
-      url: "https://data.emobon.embrc.eu/#publications"
-    - title: RESULTS
-      url: "https://data.emobon.embrc.eu/#results"
-    - title: DOCS
-      url: "https://data.emobon.embrc.eu/#docs"
-    - title: CONTACT
-      url: "https://data.emobon.embrc.eu/#contact"
   options:
     logo: https://data.emobon.embrc.eu/img/emobon_logo.png
     logoLink: "https://data.emobon.embrc.eu"
