@@ -1,13 +1,12 @@
 ---
-title: Crates (RO-Crates)
+title: EMO-BON Crates
 ---
 
-## EMO-BON Crates
 EMO-BON Crates are RO-crates that contain EMO-BON associated data, like logsheets from observatories, MetaGOflow runs, sequencing metadata, etc.  
 
 
 > **What is an RO-Crate?**  
-> An RO-Crate is a structured collection of data files, metadata, and contextual information designed to make research data easy to share, reuse, and understand - both by humans and machines.  
+> An RO-Crate is a structured collection of data files, metadata, and contextual information designed to make research data easy to share, reuse, and understand - both by humans and machines. Also characterized by the pressence of an `ro-crate-metadata.json` file.  
 
 
 
@@ -30,10 +29,9 @@ In EMO-BON context, there are various types of emo-bon ro-crates identifiable. U
     - Logsheet registry (logsheets.csv)
     - Overall project configuration
     - Cross-cutting metadata
-  - **URI**: https://data.emobon.embrc.eu/governance-data 
+  - **URI**: https://data.emobon.embrc.eu/governance-data  
   (Maintained at: https://github.com/emo-bon/governance-data)
 
-  > 
 
 - ### Observatory Crate
   - **Purpose**: Store and publish data collected by individual observatories.
@@ -60,7 +58,7 @@ In EMO-BON context, there are various types of emo-bon ro-crates identifiable. U
     - Large files managed via DVC and S3
   - **URI pattern**: `{{base}}/analysis-results-{cluster}-crate/{materialSampleId}`  
   Examples: 
-    - overview of batch: 
+    - overview of *batch?*: 
     https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/  
     (Maintained at https://github.com/emo-bon/analysis-results-cluster-01-crate)
     - analysis results of a sample:

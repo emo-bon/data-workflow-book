@@ -31,7 +31,7 @@ project:
           - file: 03-data-sources/other-data-sources.md
     - title: Data Products
       children:
-          - file: 04-data-products/crates.md
+          - file: 04-data-products/emo-bon-crates.md
     - title: Data Graph
       children:
           - file: 05-data-graph/entities.md

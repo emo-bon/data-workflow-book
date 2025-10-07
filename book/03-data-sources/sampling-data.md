@@ -2,8 +2,6 @@
 title: Sampling Data
 ---
 
-## Sampling Data
-
 ### Logsheets
 
 Sampling logsheets are structured records that document key metadata related to emo-bon observatories, the sampling activities conducted in their vicinity, and the samples collected during those events.  
