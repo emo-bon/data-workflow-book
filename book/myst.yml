@@ -51,7 +51,7 @@ project:
     - title: Addendum
       children:
           - file: 08-addendum/best-practices.md
-          - file: 08-addendum/conventions.md
+          - file: 08-addendum/github-conventions.md
           - file: 08-addendum/glossary.md
           - file: 08-addendum/status-overview.md
     - title: Data Paper
