@@ -59,7 +59,7 @@ project:
           - file: 09-data-paper/index.md
 site:
   template: book-theme
-  nav:
+  actions:
     - title: ABOUT
       url: "https://data.emobon.embrc.eu/#about"
     - title: DATA
