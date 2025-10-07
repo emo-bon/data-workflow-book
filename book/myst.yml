@@ -61,7 +61,7 @@ site:
   template: book-theme
   nav:
     - title: ABOUT
-      url: https://data.emobon.embrc.eu/#about
+      url: ../#about
     - title: DATA
       url: https://data.emobon.embrc.eu/#data
     - title: PUBLICATIONS
