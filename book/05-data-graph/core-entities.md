@@ -2,6 +2,8 @@
 title: Core Entities
 ---
 
+The Turtle files found in the EMO-BON crates are harvested and aggregated into a triple store, forming **a large, interconnected knowledge graph of EMO-BON data**.
+
 > Core Entities Diagram
 > ![Core Entity relationships diagram](../assets/core-entity-relations-diagram.png)
 

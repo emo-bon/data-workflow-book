@@ -2,6 +2,8 @@
 title: Analysis Result Entities
 ---
 
+The Turtle files found in the EMO-BON crates are harvested and aggregated into a triple store, forming **a large, interconnected knowledge graph of EMO-BON data**.
+
 > Analysis Results Entity Diagram
 > ![Analysis Results Entity relationships diagram](../assets/analysis-results-entity-relations-diagram.png)
 
