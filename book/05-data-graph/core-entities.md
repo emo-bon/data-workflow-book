@@ -1,11 +1,9 @@
 ---
-title: Entities
+title: Core Entities
 ---
 
-> Entity Relationship Diagram
-> ![Entity relationships diagram](../assets/entity-relations-diagram.png)
-
-## Core Entities
+> Core Entities Diagram
+> ![Core Entity relationships diagram](../assets/core-entity-relations-diagram.png)
 
 ### Observatory
 

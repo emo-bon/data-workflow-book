@@ -34,7 +34,8 @@ project:
           - file: 04-data-products/emo-bon-crates.md
     - title: Data Graph
       children:
-          - file: 05-data-graph/entities.md
+          - file: 05-data-graph/core-entities.md
+          - file: 05-data-graph/analysis-result-entities.md
     - title: Conformance
       children:
           - file: 06-conformance/uri-namespace.md
