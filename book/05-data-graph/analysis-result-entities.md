@@ -53,21 +53,3 @@ Collection of functional annotations
 `{{base}}/analysis-results-{cluster}-crate/{source_mat_id}-ro-crate/functional-annotation/functional-annotation`  
 Example:  
 [https://data.emobon.embrc.eu/analysis-results-cluster-01-crate/EMOBON_AAOT_Wa_42-ro-crate/functional-annotation/functional-annotation](https://s3.mesocentre.uca.fr/mgf-data-products/files/md5/9f/0b9bb0f1f867f954f27cc05900879c)
-
-
-
-## *Sequencing Entities - TBD*
-
-### *Batch*
-
-...
-
-**URI Pattern**:  
-`...`
-
-### *Sequence Run*
-
-Details of a sequencing run.
-
-**URI Pattern**:  
-`....`
