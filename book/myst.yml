@@ -35,9 +35,9 @@ project:
     - title: Data Graph
       children:
           - file: 05-data-graph/entities.md
-          - file: 05-data-graph/uri-namespace.md
     - title: Conformance
       children:
+          - file: 06-conformance/uri-namespace.md
           - file: 06-conformance/ro-profiles.md
           - file: 06-conformance/ontologies.md
     - title: Technical Details

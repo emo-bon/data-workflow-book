@@ -1,8 +1,6 @@
 ---
-title: Ontologies
+title: EMO-BON Ontologies
 ---
-
-# EMO-BON Ontologies
 
 The EMO-BON data model is designed with a strong emphasis on interoperability and reuse. To support this, it incorporates terms from established, widely adopted ontologies wherever possible. This approach ensures consistency and enhances the integration of EMO-BON data within broader semantic frameworks.
 
@@ -64,3 +62,10 @@ Terms related to governance processes and organizational structures in EMO-BON.
 e.g. `SOP`, ....
 
 > ⚠️ *Relevance and usage of this namespace should be confirmed.*
+
+
+## Vocabularies
+
+### MIxS (Minimum Information about any Sequence)
+
+A standard for describing genomic, metagenomic, and marker gene sequences.

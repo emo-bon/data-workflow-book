@@ -2,7 +2,6 @@
 title: Entities
 ---
 
-
 > Entity Relationship Diagram
 > ![Entity relationships diagram](../assets/entity-relations-diagram.png)
 
