@@ -32,6 +32,7 @@ project:
     - title: Data Products
       children:
           - file: 04-data-products/emo-bon-crates.md
+          - file: 04-data-products/emo-bon-graph.md
     - title: Data Graph
       children:
           - file: 05-data-graph/core-entities.md
