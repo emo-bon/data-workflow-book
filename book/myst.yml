@@ -33,11 +33,11 @@ project:
       children:
           - file: 04-data-products/emo-bon-crates.md
           - file: 04-data-products/emo-bon-graph.md
-    - title: Data Graph
+    - title: KG Data Model
       children:
-          - file: 05-data-graph/core-entities.md
-          - file: 05-data-graph/analysis-result-entities.md
-          - file: 05-data-graph/sequence-result-entities.md
+          - file: 05-data-graph-model/core-entities.md
+          - file: 05-data-graph-model/analysis-result-entities.md
+          - file: 05-data-graph-model/sequence-result-entities.md
     - title: Conformance
       children:
           - file: 06-conformance/uri-namespace.md
