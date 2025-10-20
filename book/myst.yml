@@ -27,6 +27,7 @@ project:
       children:
           - file: 03-data-sources/sampling-data.md
           - file: 03-data-sources/analysis-data.md
+          - file: 03-data-sources/sequence-data.md
           - file: 03-data-sources/governance-data.md
           - file: 03-data-sources/other-data-sources.md
     - title: Data Products
