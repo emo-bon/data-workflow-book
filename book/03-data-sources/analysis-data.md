@@ -2,8 +2,6 @@
 title: Analysis Data
 ---
 
-
-
 ### Types of Analysis data 
 Analysis data are generated trough batch analyses of samples collected during a single sampling event.  
 Each batch analysis runs the MetaGOflow workflow analysis of metagenomic data from EMBRC *([paper](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giad078/7321054))* on the samples collected during a single sampling event.  
@@ -22,8 +20,11 @@ DVC/S3 references of the analysis data are available in the following repository
 example:  
 - [./EMOBON_BPNS_So_34-ro-crate/EMOBON_BPNS_So_34-ro-crate](https://github.com/emo-bon/EMOBON_BPNS_So_34-ro-crate/blob/main/EMOBON_BPNS_So_34-ro-crate)  
 contains results data from a MetaGOflow workflow analysis of metagenomic data from samples collected during the 'EMOBON_BPNS_So_34' Sampling Event.
-  - [`./taxonomy-summary/SSU/DBH.merged_SSU.fasta.mseq.tsv.dvc`](https://github.com/emo-bon/analysis-results-cluster-01-crate/blob/main/EMOBON_BPNS_So_34-ro-crate/taxonomy-summary/SSU/DBH.merged_SSU.fasta.mseq.tsv.dvc) 
-  - [`./taxonomy-summary/SLU/DBH.merged_LSU.fasta.mseq.tsv.dvc`](https://github.com/emo-bon/analysis-results-cluster-01-crate/blob/main/EMOBON_BPNS_So_34-ro-crate/taxonomy-summary/LSU/DBH.merged_LSU.fasta.mseq.tsv.dvc) 
-  - [``]() 
-
+  - [`./taxonomy-summary/SSU/DBH.merged_SSU.fasta.mseq.tsv.dvc`](https://github.com/emo-bon/analysis-results-cluster-01-crate/blob/main/EMOBON_BPNS_So_34-ro-crate/taxonomy-summary/SSU/DBH.merged_SSU.fasta.mseq.tsv.dvc) ~ taxonomic annotations found by small ribosomal subunit amplification ???
+  - [`./taxonomy-summary/SLU/DBH.merged_LSU.fasta.mseq.tsv.dvc`](https://github.com/emo-bon/analysis-results-cluster-01-crate/blob/main/EMOBON_BPNS_So_34-ro-crate/taxonomy-summary/LSU/DBH.merged_LSU.fasta.mseq.tsv.dvc) ~ taxonomic annotations found by large ribosomal subunit amplification ???
+  - [``]() ~ functional annotation results of ... family of proteins/enzymes
+  - [``]() ~ functional annotation results of ... family of proteins/enzymes
+  - [``]() ~ functional annotation results of ... family of proteins/enzymes
+  - [``]() ~ functional annotation results of ... family of proteins/enzymes
+  - [``]() ~ functional annotation results of ... family of proteins/enzymes
 

@@ -2,8 +2,6 @@
 title: Other Data Sources
 ---
 
-## Other Data Sources
-
 This section describes additional data sources used in the EMO-BON data management process, including external reference datasets, vocabularies, and technical dependencies.
 
 These sources may be introduced at various stages in the data flow, either directly referenced during submission or integrated during validation, enrichment, or transformation. Some of this integration involves hardcoded mappings and configurations, as outlined in the relevant [RO profiles](../06-conformance/ro-profiles.md) and [technical details](../07-technical-details/software-components.md).
