@@ -39,7 +39,7 @@ For each sampling type, logsheets capture **three main categories of metadata**:
 
 - #### Observatory crate 
 
-  Additionally, raw versions of the logsheets are harvested into GitHub and stored as CSV files within each observatory’s dedicated RO-Crate. These CSVs are used as inputs for quality control (QC) workflows and archival.
+  Additionally, raw versions of the logsheets are harvested into GitHub and stored as CSV files within each observatory’s dedicated RO-Crate. These CSVs are used as inputs for quality control (QC) workflows, semantic uplifting and archival.
 
   Examples:   
   - 📁 [HCMR logsheets](https://github.com/emo-bon/observatory-hcmr-1-crate/tree/main/logsheets/raw) 
