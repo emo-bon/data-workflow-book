@@ -66,6 +66,10 @@ e.g. `SOP`, ....
 
 ## Vocabularies
 
-### MIxS (Minimum Information about any Sequence)
+EMO-BON uses a range of controlled vocabularies and ontologies to support consistent, semantically rich data annotation and integration:
 
-A standard for describing genomic, metagenomic, and marker gene sequences.
+- [**MIxS (Minimum Information about any (x) Sequence)**](https://gensc.org/mixs/) – for environmental and contextual metadata standards from the Genomic Standards Consortium
+- [**BODC Vocabularies**](https://vocab.nerc.ac.uk/) – maintained by the British Oceanographic Data Centre for oceanographic and marine terms
+- [**ENVO (Environment Ontology)**](https://www.ontobee.org/ontology/ENVO) – an ontology for environmental features and habitats, part of the OBO Foundry
+- [**EFO (Experimental Factor Ontology)**](https://www.ebi.ac.uk/efo/) – for describing experimental variables and sample characteristics
+- [**EDAM (EMBRACE Data and Methods Ontology)**](http://edamontology.org/) – for describing bioinformatics operations, data types, formats, and topics
