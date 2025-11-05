@@ -10,7 +10,7 @@ These sources may be introduced at various stages in the data flow, either direc
 
 Several authoritative external sources are used for reference and standardization, including:
 
-- [**Marine Regions**](https://www.marineregions.org/) – for standardized geographic locations and place names
+- [**Marine Regions**](https://www.marineregions.org/) – for standardised geographic locations and place names
 - [**WoRMS (World Register of Marine Species)**](https://www.marinespecies.org/) – for validated taxonomic information
 - [**MIxS (Minimum Information about any (x) Sequence)**](https://gensc.org/mixs/) – for environmental and contextual metadata standards from the Genomic Standards Consortium
 - [**BODC Vocabularies**](https://vocab.nerc.ac.uk/) – maintained by the British Oceanographic Data Centre for oceanographic and marine terms
@@ -24,7 +24,7 @@ These resources support semantic interoperability and consistent annotation acro
 
 Some mappings and transformations use predefined, hardcoded logic, including:
 
-- Term translations or standardizations via internal lookup tables
+- Term translations or standardisations via internal lookup tables
 - Default value insertions
 
 Details on these technical implementations can be found in the respective [RO profiles](../06-conformance/ro-profiles.md).
