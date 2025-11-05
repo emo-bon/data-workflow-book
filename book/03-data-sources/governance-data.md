@@ -2,9 +2,9 @@
 title: Governance Data
 ---
 
-Governance data is structured information that outlines how decisions are made within a community, project, or organization — including who is responsible, what processes are followed, and how participation is organized. By making these elements explicit and accessible, governance data supports transparency, accountability, and collaboration, helping to create systems that are fair, inclusive, and adaptable.
+Governance data are structured information that outline how decisions are made within EMO BON — including who is responsible, what processes are followed, and how participation is organised. 
 
-For the EMO-BON project, governance data is openly available on GitHub:
+For the EMO-BON project, governance data are openly available on GitHub:
 
 🔗 [https://github.com/emo-bon/governance-crate](https://github.com/emo-bon/governance-crate)
 
