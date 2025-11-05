@@ -3,21 +3,15 @@ title: Analysis Data
 ---
 
 ### Types of Analysis data 
-Analysis data are generated trough batch analyses of samples collected during a single sampling event.  
-Each batch analysis runs the MetaGOflow workflow analysis of metagenomic data from EMBRC *([paper](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giad078/7321054))* on the samples collected during a single sampling event.  
+Analysis data are currently generated for the sequences produced from the samples collected during sampling events. For this we use the [MetaGOflow](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giad078/7321054) workflow on the metagenomic data. A single sequence is processed in each run, and we are making our way through each of the [sequencing batches](https://github.com/emo-bon/sequencing-crate/tree/main/shipment) that are managed by EMO BON.   
 
-The Analysis data includes/consists of (~ MetaGoFlow metagenomics data products) ...  [*DNA metabarcoding, chemical profiling, or other lab-based methods, depending on the type of sample and the research question*].
-== the types of analysis data
+The Analysis data are all the outputs of MetaGoFlow: *ASK CYMON to fill in here*.
 
 ### Availability of Analysis data
 
-DVC/S3 references of the analysis data are available in the following repository, where the repository structure reflects the batches formation in which samples were analysed:
+As the outputs of MetaGOflow are large, they are not themselves stored on GitHub, rather on *ASK CYMON to fill in details here*. These outputs for each run on MetaGOflow can be found in the folders in [https://github.com/emo-bon/analysis-results-cluster-01-crate](https://github.com/emo-bon/analysis-results-cluster-01-crate), each having the name of the material sample that is the source of the processed sequence.  Within those folders are the DVC/S3 file references, organised following the structure of MetaGOflows outputs. A RO-Crate json file then describes and links each file in each folder. 
 
-🔗 [https://github.com/emo-bon/analysis-results-cluster-01-crate](https://github.com/emo-bon/analysis-results-cluster-01-crate)
-
-~ certain parts of the analysis data (~ data products) are used as input for semantic uplifting.
-
-example:  
+example:  *ASK CYMON to edit here*
 - [./EMOBON_BPNS_So_34-ro-crate/EMOBON_BPNS_So_34-ro-crate](https://github.com/emo-bon/EMOBON_BPNS_So_34-ro-crate/blob/main/EMOBON_BPNS_So_34-ro-crate)  
 contains results data from a MetaGOflow workflow analysis of metagenomic data from samples collected during the 'EMOBON_BPNS_So_34' Sampling Event.
   - [`./taxonomy-summary/SSU/DBH.merged_SSU.fasta.mseq.tsv.dvc`](https://github.com/emo-bon/analysis-results-cluster-01-crate/blob/main/EMOBON_BPNS_So_34-ro-crate/taxonomy-summary/SSU/DBH.merged_SSU.fasta.mseq.tsv.dvc) ~ taxonomic annotations found by small ribosomal subunit amplification ???
