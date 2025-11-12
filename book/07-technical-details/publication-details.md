@@ -157,6 +157,79 @@ flowchart TD
 ---
 
 ## Details
+### Versioning and Archival
+
+#### Git Versioning
+- All content is versioned in Git, preserving full history and supporting reproducibility.
+- Tags are used for releases and important milestones.
+
+#### DOIs
+- EMO-BON datasets may receive DOIs for citation and long-term reference.
+- Zenodo integration is used for releases, enabling per-observatory or per-analysis DOIs.
+### Content Delivery
+
+GitHub Pages sites in the emo-bon organization deliver a variety of content types:
+
+#### Static Files
+- HTML pages
+- CSS stylesheets
+- JavaScript for interactivity
+- Images and media
+
+#### Data Files
+- CSV exports
+- RDF/Turtle files
+- JSON-LD metadata
+- Downloadable datasets
+
+#### API Endpoints
+- SPARQL endpoint (where available)
+- GitHub API for repository access
+- UDAL query service (in development)
+### Custom Domain Configuration
+
+EMO-BON uses the custom domain `data.emobon.embrc.eu` for its main GitHub Pages site and related publications. This is configured as follows:
+1. **CNAME File**: Each repository intended for publication includes a `CNAME` file in its root, specifying the custom domain.
+2. **DNS Configuration**: EMBRC manages DNS records to point the domain to GitHub Pages servers.
+3. **GitHub Configuration**: Repository settings are updated to use the custom domain.
+4. **HTTPS**: GitHub Pages automatically provides HTTPS for custom domains.
+### Publishing Workflow
+
+#### Automated Publishing
+
+For data repositories and sites, publishing is typically automated:
+1. **Data Changes**: Updates (e.g., logsheet edits) trigger a GitHub Actions workflow.
+2. **Processing**: Data is validated and processed automatically.
+3. **Generation**: RO-Crate packages and HTML content are generated.
+4. **Deployment**: Results are pushed to the `gh-pages` branch.
+5. **Publication**: GitHub Pages serves the updated content to the web.
+
+#### Manual Publishing
+
+For documentation and profile repositories, publishing is often manual:
+1. **Edit**: Changes are made in the main branch.
+2. **Review**: Pull requests are reviewed and approved.
+3. **Merge**: Approved changes are merged to main.
+4. **Build**: GitHub Actions build the site or documentation.
+5. **Deploy**: The site is deployed to GitHub Pages.
+### Repository Naming Conventions
+
+Repository names in the emo-bon organization follow clear conventions to ensure consistency and discoverability. For detailed guidelines, see the [Conventions](../08-addendum/conventions.md) section.
+
+Common patterns include:
+- Use of hyphens to separate words
+- Suffixes indicating repository type (e.g., `-crate`, `-profile`, `-book`)
+- Descriptive names for observatories, profiles, and documentation
+
+### Repository Types
+
+The following repository types are used in the emo-bon organization:
+- **-crate**: RO-Crate data repositories containing structured datasets and metadata
+- **-profile**: RO-Profile specifications defining metadata schemas and templates
+- **-action**: GitHub Actions for workflow automation
+- **-docker**: Docker images for reproducible environments
+- **-book**: Documentation books (e.g., this data workflow book)
+- **.github.io**: GitHub Pages sites for web publication
 
 ### GitHub Pages Publications
 
