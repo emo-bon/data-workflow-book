@@ -116,12 +116,12 @@ curl "https://www.ebi.ac.uk/ena/portal/api/search?query=study_accession%3DPRJEB5
 
 EMO-BON maintains links between:
 - **Observatory samples** (in observatory crates)
-- **ENA accessions** (in sequencing crate)
+- **ENA accessions** (in sequencing logistics crate)
 - **Analysis results** (in analysis results crates)
 
 ### Sequencing Crate
 
-**Repository**: `sequencing-crate` (planned)
+**Repository**: `sequencing-logistics-crate` (planned)
 
 **Purpose**: Central registry linking samples to their sequences
 
@@ -144,7 +144,7 @@ ENA Submission
     ↓
 ENA Accessions
     ↓
-Sequencing Crate (GitHub)
+Sequencing Logistics Crate (GitHub)
 ```
 
 ## ENA Metadata Standards

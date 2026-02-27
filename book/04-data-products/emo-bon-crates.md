@@ -66,13 +66,13 @@ In EMO-BON context, there are various types of emo-bon ro-crates identifiable. U
   (Maintained at: https://github.com/emo-bon/analysis-results-cluster-01-crate)  
 
 
-- ### *Sequencing Crate - TBD*
+- ### *Sequencing Logistics Crate - TBD*
   - **Purpose**: Track sequencing operations and link samples to their sequences.
   - **Contents**:
     - Sequencing metadata
     - Batch information
     - Links to sequences in ENA
     - Sequence run details
-  - **URI pattern**: `sequencing-crate`
+  - **URI pattern**: `sequencing-logistics-crate`
   Example: ...
   (Maintained at: ...)

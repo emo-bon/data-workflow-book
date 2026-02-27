@@ -119,7 +119,7 @@ This section provides an overview of the status of various EMO-BON components an
 ### Current Limitations
 
 1. **SPARQL Endpoint**: Not yet publicly available
-2. **Sequencing Crate**: Structure not finalized
+2. **Sequencing Logistics Crate**: Structure not finalized
 3. **Analysis Results**: Not complete for all observatories
 4. **URI Dereferenceability**: Some URIs not yet dereferenceable
 

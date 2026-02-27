@@ -39,5 +39,5 @@ In context of EMO-BON, following data types / accession numbers are relevant:
 
 ### Sequence Crate
 
-Sequence metadata is available in the [sequencing-crate repository](https://github.com/emo-bon/sequencing-crate), along with links to both Genoscope (via genoscope IDs) and ENA (via ENA accession numbers).  
-The repository is structured in **shipment batches** (for example: [batch‑001](https://github.com/emo-bon/sequencing-crate/tree/main/shipment/batch-001)), where each batch folder contains all the files pertaining to that group’s analyses – metadata tables, accession mappings, and any supplementary documentation for that batch. 
+Sequence metadata is available in the [sequencing-logistics-crate repository](https://github.com/emo-bon/sequencing-logistics-crate), along with links to both Genoscope (via genoscope IDs) and ENA (via ENA accession numbers).  
+The repository is structured in **shipment batches** (for example: [batch‑001](https://github.com/emo-bon/sequencing-logistics-crate/tree/main/shipment/batch-001)), where each batch folder contains all the files pertaining to that group’s analyses – metadata tables, accession mappings, and any supplementary documentation for that batch. 

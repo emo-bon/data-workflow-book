@@ -27,7 +27,7 @@ Each URI is further extended with a path specific to the entity type:
 | governance-crate | `/governance-crate` |  |  |
 | observatory-crate | `/observatory-{obsid}-crate` |  |  |
 | analysis-results-crate | `/analysis-results-{cluster}-crate` |  |  |
-| sequencing-crate | `/sequencing-crate` |  |  |
+| sequencing-logistics-crate | `/sequencing-logistics-crate` |  |  |
 | **Data Entities** |  |  |  |
 | Observatory | `/observatory-{obs_id}-crate` | `/{env_package}/observatory/{obs_id}` |  |
 | Sampling event | `/observatory-{obs_id}-crate` | `/{env_package}/sampling-event/{sampling_event}` |  |
@@ -37,8 +37,8 @@ Each URI is further extended with a path specific to the entity type:
 | Taxon summary | `/analysis-results-{cluster}-crate` | `{source_mat_id}-ro-crate/taxonomy-summary-{geneticMarker}` | `#{OTU-ID}` |
 | Functional annotation | `/analysis-results-{cluster}-crate` | `{source_mat_id}-ro-crate/functional-annotation` | `#{rowID}` |
 |  |  |  |  |
-| *batch* | *`/sequencing-crate`* | *`/shipment/batch/{batchID}`* |  |
-| *sequence-run* | *`/sequencing-crate`* | *`/shipment/batch/{batchID}`* | *`#SequenceAnalysis`* |
+| *batch* | *`/sequencing-logistics-crate`* | *`/shipment/batch/{batchID}`* |  |
+| *sequence-run* | *`/sequencing-logistics-crate`* | *`/shipment/batch/{batchID}`* | *`#SequenceAnalysis`* |
 
 ## Detailed Specifications - URI Path Patterns 
 
@@ -92,9 +92,9 @@ URI pattern:
 [https://data.emobon.embrc.eu/analysis-results-cluster-01-crate](https://data.emobon.embrc.eu/analysis-results-cluster-01-crate)
 
 
-### Sequencing Crate
+### Sequencing Logistics Crate
 
-URI: `{base}/sequencing-crate`
+URI: `{base}/sequencing-logistics-crate`
 
 :::{note}
 Doesn't exist yet
@@ -175,7 +175,7 @@ URI pattern: `{base}/analysis-results-{cluster}-crate/{source_mat_id}-ro-crate/f
 
 ### Batch
 
-URI pattern: `{base}/sequencing-crate/shipment/batch/{batchID}`
+URI pattern: `{base}/sequencing-logistics-crate/shipment/batch/{batchID}`
 
 | Parameter  | Description                  | Allowed Values | 
 |------------|------------------------------|----------------|
@@ -187,7 +187,7 @@ Doesn't exist yet
 
 ### Sequence Run
 
-URI pattern: `{base}/sequencing-crate/shipment/batch/{batchID}#SequenceAnalysis`
+URI pattern: `{base}/sequencing-logistics-crate/shipment/batch/{batchID}#SequenceAnalysis`
 
 | Parameter  | Description                  | Allowed Values | 
 |------------|------------------------------|----------------|

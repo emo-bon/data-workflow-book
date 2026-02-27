@@ -66,7 +66,7 @@ An RO-Profile is itself an RO-Crate that formally describes the layout and struc
 - Links to ENA accessions
 - Sample-to-sequence mappings
 
-**Conforming Crates**: The `sequencing-crate` repository will conform to this profile.
+**Conforming Crates**: The `sequencing-logistics-crate` repository will conform to this profile.
 
 ## Profile Structure
 
